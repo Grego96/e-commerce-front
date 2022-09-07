@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: rgb(255, 195, 116);
+  --seg-bg-color: rgb(255, 166, 0);
+}
+
+/* nav home */
+
+.nav-home {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.nav-home h1 {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+.nav-home-items {
+  display: flex;
+  font-size: 1rem;
+  list-style: none;
+  padding-bottom: 0;
+}
+
+.nav-home-items .nav-home-item {
+  display: flex;
+  margin: 15px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-home-item p {
+  margin: 0;
+}
+
+.nav-home-items svg {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.nav-home-item:hover {
+  border-bottom: 3px solid var(--main-bg-color);
+}
+
+.nav-home-item:hover .icon--arrow-bottom1 {
+  transform: rotate(180deg);
+}
+
+.nav-home-item:hover .icon--arrow-bottom2 {
+  transform: rotate(180deg);
+}
+
+.nav-home-item:hover .icon--arrow-bottom3 {
+  transform: rotate(180deg);
+}
+
+.nav-home-item:hover .icon--arrow-bottom4 {
+  transform: rotate(180deg);
+}
+
+.utilities-home {
+  font-size: 0.8rem;
+  display: flex;
+}
+
+.utilities-home p {
+  font-size: 1rem;
+  margin: 15px;
+}
+.utilities-home svg {
+  margin: 12px;
+  margin-left: 10px;
+}
+
+/*  main home */
+
+.main-img {
+  height: 800px;
+  background-color: gainsboro;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+.main-img button {
+  width: 170px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: var(--main-bg-color);
+  border: none;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+.main-img button:hover {
+ background-color: var(--seg-bg-color);
+}
+
+.main-img button:hover .arrow-main-button {
+  transform: translateX(10px);
+}
+
+.arrow-main-button {
+  height: 36px;
+  transition: 0.3s;
+}
+
+.main-img h3 {
+  font-size: 4.5rem;
+}
+
+/* featured */
+
+.featured {
+  margin-bottom: 100px;
+}
+
+.title-featured {
+  margin: 120px 0;
+  /* margin: 80px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.title-featured span {
+  background-color: rgb(252, 231, 193);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 0.7rem;
+}
+
+.title-featured h4 {
+  margin-top: 30px;
+  background-color: white;
+  font-size: 3.5rem;
+}
+
+.featured-img-left {
+  width: 100%;
+}
+
+.featured-card {
+  padding: 50px;
+}
+
+.right-img-card {
+  height: 200px;
+}
+
+.featured-card-button {
+  border: none;
+  background-color: var(--main-bg-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  transition: 0.3s;
+}
+
+.featured-card-button:hover {
+  background-color: var(--seg-bg-color);
+}

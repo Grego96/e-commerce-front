@@ -1,10 +1,15 @@
 import "./css/Home.css";
+import NavHome from "../components/NavHome";
+import MainHome from "../components/MainHome";
+import FeaturedCollections from "../components/FeaturedCollections";
 
 function Home() {
   return (
-    <>
-      <h1>Home</h1>
-    </>
+    <div className="home">
+      <NavHome />
+      <MainHome />
+      <FeaturedCollections />
+    </div>
   );
 }
 
