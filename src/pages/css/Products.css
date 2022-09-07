@@ -1,0 +1,35 @@
+/* .container{
+    font-family: 'Roboto', sans-serif;
+} */
+
+.bikes-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.bike-card{
+    width: 150%;
+}
+.img-bike{
+    width: 150%;
+    height: 60%;
+}
+
+
+a{
+    color: #000;
+    font-size: 1rem;  
+}
+a:hover{
+    color: #000;
+
+}
+
+/* Categories section */
+ul{
+   list-style-type: none;
+}
+li{
+    margin-top: 10px;
+    cursor: pointer;
+}
