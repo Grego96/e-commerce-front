@@ -1,4 +1,5 @@
 import React from "react";
+import "../pages/css/Home.css";
 
 function Nav_home() {
   return (
@@ -7,7 +8,12 @@ function Nav_home() {
       <ul className="nav-home-items">
         <li className="nav-home-item">
           <p>Ebikes</p>
-          <svg class="icon icon--arrow-bottom icon--arrow-bottom1" viewBox="0 0 14 8" role="presentation" fill="none">
+          <svg
+            class="icon icon--arrow-bottom icon--arrow-bottom1"
+            viewBox="0 0 14 8"
+            role="presentation"
+            fill="none"
+          >
             <path
               d="M1 1L7 7L13 1"
               stroke="currentColor"
@@ -20,7 +26,12 @@ function Nav_home() {
         </li>
         <li className="nav-home-item">
           <p>Accessories</p>
-          <svg class="icon icon--arrow-bottom icon--arrow-bottom2" viewBox="0 0 14 8" role="presentation" fill="none">
+          <svg
+            class="icon icon--arrow-bottom icon--arrow-bottom2"
+            viewBox="0 0 14 8"
+            role="presentation"
+            fill="none"
+          >
             <path
               d="M1 1L7 7L13 1"
               stroke="currentColor"
@@ -33,7 +44,12 @@ function Nav_home() {
         </li>
         <li className="nav-home-item">
           <p>Service & support</p>
-          <svg class="icon icon--arrow-bottom icon--arrow-bottom3" viewBox="0 0 14 8" role="presentation" fill="none">
+          <svg
+            class="icon icon--arrow-bottom icon--arrow-bottom3"
+            viewBox="0 0 14 8"
+            role="presentation"
+            fill="none"
+          >
             <path
               d="M1 1L7 7L13 1"
               stroke="currentColor"
@@ -46,7 +62,12 @@ function Nav_home() {
         </li>
         <li className="nav-home-item">
           <p>About Rad</p>
-          <svg class="icon icon--arrow-bottom icon--arrow-bottom4" viewBox="0 0 14 8" role="presentation" fill="none">
+          <svg
+            class="icon icon--arrow-bottom icon--arrow-bottom4"
+            viewBox="0 0 14 8"
+            role="presentation"
+            fill="none"
+          >
             <path
               d="M1 1L7 7L13 1"
               stroke="currentColor"
@@ -113,9 +134,7 @@ function Nav_home() {
         </svg>
       </div>
 
-      <div className="menu ">
-
-      </div>
+      <div className="menu "></div>
     </div>
   );
 }

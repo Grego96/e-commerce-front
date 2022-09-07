@@ -1,121 +1,20 @@
-.go-back {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0.25em 0.25em 0.25em 3em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-image: url(https://uploads-ssl.webflow.com/607db83d3655938669f3191a/60a51a014db5ff4d90af0d4f_arrow-left_button_dark.svg);
-  background-position: 0 50%;
-  background-size: auto;
-  background-repeat: no-repeat;
-  -webkit-transition: padding 0.3s;
-  transition: padding 0.3s;
-  color: #212806;
-  font-size: 1em;
-  text-decoration: none;
-  text-transform: uppercase;
+section {
+  padding-top: 3.5em;
+  padding-bottom: 6em;
+  padding-left: 5em !important;
+  padding-right: 5em !important;
 }
 
-.product-images {
-  width: 50%;
-}
-
-.product-images img {
-  max-width: 100%;
-}
-
-.product-info {
-  width: 50%;
-}
-
-.product-info h3 {
+.container-fluid h3 {
   margin-top: 0;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
   font-size: 3em;
   line-height: 120%;
   font-weight: 300;
 }
 
-.over-name {
-  font-size: 1em;
+.up-title {
+  font-size: 0.8rem;
   font-weight: 400;
   text-transform: uppercase;
-}
-
-.product-price {
-  font-size: 1.25em;
-  line-height: 140%;
-  font-weight: 500;
-}
-
-.product-price-wrapper {
-  padding-bottom: 0.75em;
-  border-bottom: 1px solid black;
-}
-
-p {
-  margin-top: 0.8em !important;
-  margin-bottom: 1em !important;
-  font-size: 1.1em;
-  line-height: 160%;
-  text-align: justify;
-}
-
-.quantity-wrapper {
-  display: flex;
-  min-height: 38px;
-  margin-right: 2em;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  align-items: center;
-  border-radius: 40px;
-  background-color: #f5eee6;
-}
-
-.product-quantity {
-  width: 38px;
-  margin-bottom: 0;
-  padding: 0.5em 0;
-  border-style: none;
-  background-color: transparent;
-  text-align: center;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.product-quantity:focus {
-  outline: none;
-}
-
-.product-quantity::-webkit-outer-spin-button,
-.product-quantity::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.quantity-modifier {
-  display: flex;
-  width: 2em;
-  height: 100%;
-  min-height: 38px;
-
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.buy-product-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
