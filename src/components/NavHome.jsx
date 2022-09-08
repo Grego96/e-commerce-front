@@ -26,9 +26,9 @@ function Nav_home() {
           <Nav className="me-auto">
             <Nav.Link>
               <div className="nav-home-item nav-home-item1">
-                <p>Ebikes</p>
+                <p className="m-0 p-0 p-lg-3">Ebikes</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom1"
+                  class="icon icon--arrow-bottom icon--arrow-bottom1 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
@@ -95,25 +95,19 @@ function Nav_home() {
                   </div>
                   <div className="col-md-6">
                     <div className="row">
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <NavCardProduct img={bicycle1} categorie={"Off-road"} />
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <NavCardProduct img={bicycle2} categorie={"Cargo & ulility"} />
-                      </div>
-                      <div className="col-md-4">
-                        <NavCardProduct img={bicycle3} categorie={"City & commuter"} />
                       </div>
                     </div>
                     <div className="row">
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <NavCardProduct img={bicycle4} categorie={"Folding"} />
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <NavCardProduct img={bicycle1} categorie={"Step-thru"} />
-                      </div>
-                      <div className="col-md-4">
-                        <NavCardProduct img={bicycle1} categorie={"High-step"} />
                       </div>
                     </div>
                   </div>
@@ -128,9 +122,9 @@ function Nav_home() {
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
-                <p>Accessories</p>
+                <p className="m-0 p-0 p-lg-3">Accessories</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom2"
+                  class="icon icon--arrow-bottom icon--arrow-bottom2 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
@@ -148,9 +142,9 @@ function Nav_home() {
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
-                <p>Service & support</p>
+                <p className="m-0 p-0 p-lg-3">Service & support</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom3"
+                  class="icon icon--arrow-bottom icon--arrow-bottom3 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
@@ -168,9 +162,9 @@ function Nav_home() {
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
-                <p>About Rad</p>
+                <p className="m-0 p-0 p-lg-3">About Rad</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom4"
+                  class="icon icon--arrow-bottom icon--arrow-bottom4 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
