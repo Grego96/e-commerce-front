@@ -5,6 +5,7 @@ import ProductsHeader from "../components/ProductsHeader";
 import NavProducts from "../components/NavProducts";
 import ProdAndCateg from "../components/ProdAndCateg";
 import Footer from "../components/Footer";
+import EmailSection from "../components/EmailSection";
 
 function Products() {
   return (
@@ -13,6 +14,7 @@ function Products() {
       <ProductsHeader />
       <NavProducts />
       <ProdAndCateg />
+      <EmailSection />
       <Footer />
     </>
   );

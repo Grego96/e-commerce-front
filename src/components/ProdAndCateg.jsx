@@ -7,7 +7,7 @@ const ProdAndCateg = () => {
   return (
     <div className="products-container">
       <div className="row">
-        <div className="col-2">
+        <div className="col-2 remove-col">
           <CategoriesSection />
         </div>
 
