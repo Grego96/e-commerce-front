@@ -1,0 +1,20 @@
+section {
+  padding-top: 3.5em;
+  padding-bottom: 6em;
+  padding-left: 5em !important;
+  padding-right: 5em !important;
+}
+
+.container-fluid h3 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-size: 3em;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+.up-title {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}

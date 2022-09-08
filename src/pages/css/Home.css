@@ -14,7 +14,9 @@
 .nav-home {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .nav-home h1 {
@@ -31,19 +33,20 @@
 
 .nav-home-items .nav-home-item {
   display: flex;
-  margin: 15px;
+  margin: 0 15px;
   cursor: pointer;
   border-bottom: 3px solid transparent;
 }
 
 .nav-home-item p {
-  margin: 0;
+  margin: 15px;
 }
 
 .nav-home-items svg {
   width: 10px;
   height: 10px;
-  margin-top: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: 5px;
   transition: 0.3s;
 }
@@ -82,6 +85,57 @@
   margin-left: 10px;
 }
 
+.menu-hover1 {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  padding: 100px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.541);
+  transition: 0.3s;
+  box-shadow: 2px 2px 15px gray;
+}
+.nav-home-item1:hover ~ .menu-hover1 {
+  background-color: white;
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-hover1:hover {
+  background-color: white;
+  visibility: visible;
+  opacity: 1;
+}
+
+.left-menu h5{
+  font-size: 1.8rem;
+}
+
+.left-menu p{
+  font-size: 0.8rem;
+  margin-right: 200px;
+}
+
+.left-menu h6{
+  margin-top: 20px;
+}
+
+.left-menu h6 svg {
+  margin: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.card-nav {
+  text-align: center;
+}
+
+.card-nav h4 {
+  font-size: 1rem;
+}
+
 /*  main home */
 
 .main-img {
@@ -108,7 +162,7 @@
 }
 
 .main-img button:hover {
- background-color: var(--seg-bg-color);
+  background-color: var(--seg-bg-color);
 }
 
 .main-img button:hover .arrow-main-button {
@@ -132,7 +186,6 @@
 
 .title-featured {
   margin: 120px 0;
-  /* margin: 80px; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -155,6 +208,7 @@
 
 .featured-img-left {
   width: 100%;
+  border-radius: 20px;
 }
 
 .featured-card {
@@ -176,4 +230,21 @@
 
 .featured-card-button:hover {
   background-color: var(--seg-bg-color);
+}
+
+/* story home */
+
+.story-img {
+  margin-bottom: 3000px;
+}
+
+.parallax-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.h-parallax {
+  font-size: 4rem;
 }

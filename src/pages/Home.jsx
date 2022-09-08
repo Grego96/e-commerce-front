@@ -2,6 +2,7 @@ import "./css/Home.css";
 import NavHome from "../components/NavHome";
 import MainHome from "../components/MainHome";
 import FeaturedCollections from "../components/FeaturedCollections";
+import StoryHome from "../components/StoryHome";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <NavHome />
       <MainHome />
       <FeaturedCollections />
+      <StoryHome />
     </div>
   );
 }
