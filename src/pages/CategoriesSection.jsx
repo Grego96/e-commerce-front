@@ -37,6 +37,16 @@ const CategoriesSection = () => {
       </div>
       <div>
         <p>Model Family</p>
+        <svg class="icon" viewBox="0 0 14 8" role="presentation" fill="none">
+          <path
+            d="M1 1L7 7L13 1"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          ></path>
+        </svg>
         <ul>
           <li>
             <input type="checkbox" name="Cargo" className="checkbox-round" />
@@ -66,6 +76,16 @@ const CategoriesSection = () => {
       </div>
       <div>
         <p>Frame</p>
+        <svg class="icon" viewBox="0 0 14 8" role="presentation" fill="none">
+          <path
+            d="M1 1L7 7L13 1"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          ></path>
+        </svg>
         <ul>
           <li>
             <input type="checkbox" name="Cargo" className="checkbox-round" />

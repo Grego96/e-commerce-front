@@ -22,6 +22,12 @@ function Products() {
             <ProductsCard productImg={product1} />
             <ProductsCard productImg={product1} />
             <ProductsCard productImg={product1} />
+            <ProductsCard productImg={product1} />
+            <ProductsCard productImg={product1} />
+            <ProductsCard productImg={product1} />
+            <ProductsCard productImg={product1} />
+            <ProductsCard productImg={product1} />
+            <ProductsCard productImg={product1} />
           </div>
         </div>
       </div>
