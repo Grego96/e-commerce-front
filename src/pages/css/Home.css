@@ -32,18 +32,13 @@
   padding-bottom: 0;
 }
 
-.nav-home-items .nav-home-item {
+.nav-home-item {
   display: flex;
-  margin: 0 15px;
   cursor: pointer;
   border-bottom: 3px solid transparent;
 }
 
-.nav-home-item p {
-  margin: 15px;
-}
-
-.nav-home-items svg {
+.nav-home-item svg {
   width: 10px;
   height: 10px;
   margin-top: auto;
@@ -88,11 +83,11 @@
 
 .menu-hover1 {
   position: absolute;
-  top: 65px;
+  top: 80px;
   left: 0;
   visibility: hidden;
   opacity: 0;
-  padding: 100px;
+  padding: 50px;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.541);
   transition: 0.3s;
@@ -110,13 +105,17 @@
   opacity: 1;
 }
 
+.categorie-nav {
+  font-size: 1.5rem !important;
+}
+
 .left-menu h5 {
   font-size: 1.8rem;
 }
 
 .left-menu p {
   font-size: 0.8rem;
-  margin-right: 200px;
+  /* margin-right: 200px; */
 }
 
 .left-menu h6 {
@@ -131,6 +130,7 @@
 
 .card-nav {
   text-align: center;
+  padding: 0 60px;
 }
 
 .card-nav h4 {
@@ -218,7 +218,8 @@
 }
 
 .right-img-card {
-  height: 200px;
+  width: 100%;
+  /* height: 200px; */
 }
 
 .featured-card-button {
@@ -275,9 +276,12 @@
   font-size: 0.9rem;
 }
 
+.services {
+  margin-bottom: 150px;
+}
+
 .service {
   padding: 30px;
-  margin-bottom: 150px;
 }
 
 .services-types {
@@ -298,21 +302,7 @@
 }
 
 .login-home {
-  padding-top: 20px;
-  width: 400px;
-  height: 95vh;
-  background-color: white;
-  position: absolute;
-  top: 79px;
-  transition: 0.5s;
-}
-
-.login-home-true {
-  right: 0px;
-}
-
-.login-home-false {
-  right: -1000px;
+  background-color: transparent;
 }
 
 .login-register {
@@ -369,4 +359,12 @@
   opacity: 0;
   position: absolute;
   padding: 20px;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler span {
+ background-image: url("../../img/others/menu-hamburguesa.png") !important;
 }
