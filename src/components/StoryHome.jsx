@@ -6,7 +6,7 @@ function StoryHome() {
   return (
     <div className="story-img" style={{ backgroundImage: `url(${background})` }}>
       <Parallax bgImage={background} bgImageAlt="" strength={-200}>
-        <div className="parallax-story" style={{ height: "500px" }}>
+        <div className="parallax-story" style={{ height: "700px" }}>
           <h5 className="h-parallax">We build better bikes.</h5>
         </div>
       </Parallax>

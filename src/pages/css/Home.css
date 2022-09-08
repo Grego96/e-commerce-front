@@ -17,6 +17,7 @@
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 0;
 }
 
 .nav-home h1 {
@@ -109,16 +110,16 @@
   opacity: 1;
 }
 
-.left-menu h5{
+.left-menu h5 {
   font-size: 1.8rem;
 }
 
-.left-menu p{
+.left-menu p {
   font-size: 0.8rem;
   margin-right: 200px;
 }
 
-.left-menu h6{
+.left-menu h6 {
   margin-top: 20px;
 }
 
@@ -191,6 +192,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  z-index: -1;
 }
 
 .title-featured span {
@@ -212,7 +214,7 @@
 }
 
 .featured-card {
-  padding: 50px;
+  padding: 40px;
 }
 
 .right-img-card {
@@ -235,7 +237,7 @@
 /* story home */
 
 .story-img {
-  margin-bottom: 3000px;
+  margin-bottom: 150px;
 }
 
 .parallax-story {
@@ -247,4 +249,124 @@
 
 .h-parallax {
   font-size: 4rem;
+}
+
+.main-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 70px;
+}
+
+.main-services span {
+  font-size: 0.8rem;
+  background-color: rgb(252, 231, 193);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+.main-services h5 {
+  font-size: 3rem;
+}
+
+.main-services p {
+  font-size: 0.9rem;
+}
+
+.service {
+  padding: 30px;
+  margin-bottom: 150px;
+}
+
+.services-types {
+  text-align: center;
+}
+
+.services-types img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.services-types h4 {
+  font-size: 1.4rem;
+}
+
+.services-types p {
+  font-size: 0.9rem;
+}
+
+.login-home {
+  padding-top: 20px;
+  width: 400px;
+  height: 95vh;
+  background-color: white;
+  position: absolute;
+  top: 79px;
+  transition: 0.5s;
+}
+
+.login-home-true {
+  right: 0px;
+}
+
+.login-home-false {
+  right: -1000px;
+}
+
+.login-register {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
+.login-home button {
+  font-size: 1.5rem;
+  border: none;
+  background-color: white;
+}
+
+.login-home h6 {
+  font-size: 1.2rem;
+}
+
+.login-home label {
+  margin-top: 20px;
+}
+
+.login-home input {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  background-color: rgb(232, 240, 254);
+}
+
+.login-home input:focus {
+  background-color: rgb(232, 240, 254);
+}
+
+.login-home .login-button {
+  border: none;
+  font-size: 1rem;
+  background-color: var(--main-bg-color);
+  padding: 5px 30px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.form-register {
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  padding: 20px;
+}
+
+.form-login {
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  padding: 20px;
 }
