@@ -6,7 +6,7 @@ import calendar from "../img/icons/calendar.svg";
 import shield from "../img/icons/shield.svg";
 import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
-
+import ServiceItem from "./ProductServiceItem";
 function ProductHeader() {
   return (
     <>
@@ -31,24 +31,15 @@ function ProductHeader() {
                 miles per charge.
               </p>
               <div className="d-flex justify-content-around my-4">
-                <div className="text-center">
-                  <img src={calendar} alt="" />
-                  <div className="fw-bold">14-day free trial</div>
-                </div>
-                <div className="text-center">
-                  <img src={shield} alt="" />
-                  <div className="fw-bold">1 year warranty</div>
-                </div>
-                <div className="text-center">
-                  <img src={headphones} alt="" />
-                  <div className="fw-bold">Ask our experts</div>
-                </div>
+                <ServiceItem img={calendar} text={"14-day free trial"} />
+                <ServiceItem img={shield} text={"1 year warranty"} />
+                <ServiceItem img={headphones} text={"Ask our experts"} />
               </div>
             </div>
             <div className="buy-product-wrapper">
               <div className="quantity-wrapper">
                 <div className="quantity-modifier">
-                  <img src={minus} alt="" class="quantity-icon"></img>
+                  <img src={minus} alt="" className="quantity-icon"></img>
                 </div>
                 <input
                   type="number"
@@ -59,7 +50,7 @@ function ProductHeader() {
                   className="product-quantity"
                 />
                 <div className="quantity-modifier">
-                  <img src={plus} alt="" class="quantity-icon" />
+                  <img src={plus} alt="" className="quantity-icon" />
                 </div>
               </div>
               <button type="" className="add-to-cart-button">
