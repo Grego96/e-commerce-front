@@ -3,6 +3,8 @@ import NavHome from "../components/NavHome";
 import MainHome from "../components/MainHome";
 import FeaturedCollections from "../components/FeaturedCollections";
 import StoryHome from "../components/StoryHome";
+import ServicesHome from "../components/ServicesHome";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -11,6 +13,8 @@ function Home() {
       <MainHome />
       <FeaturedCollections />
       <StoryHome />
+      <ServicesHome />
+      <Footer />
     </div>
   );
 }
