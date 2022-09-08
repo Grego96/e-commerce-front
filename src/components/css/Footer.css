@@ -1,0 +1,15 @@
+.footer {
+  background-color: black;
+  color: white;
+}
+
+.footer-item-header {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(252, 248, 243, 0.5);
+  opacity: 0.9;
+}
+
+.footer-item-list li {
+  margin-bottom: 0.7em;
+}
