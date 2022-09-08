@@ -1,35 +1,96 @@
-/* .container{
-    font-family: 'Roboto', sans-serif;
-} */
+/* header */
+.header-container{
+    background-color:#FAF9F5 ;
+}
+.header-content{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.header-title{
+    font-size: 4rem;
+    text-align: center;
+}
+.header-img{
+    width: 70%;
+}
+.header-text{
+    color: #7C7C7B;
+}
 
+/* nav products */
+.nav-products{
+    background-color: #F1EFE5;
+    display: flex;
+    justify-content: center;
+ 
+    margin: 10px;
+    padding: 10px ;
+}
+.nav-view{
+    padding-left: 35%;
+    padding-right: 40%;
+}
+
+button{
+    border: none;
+}
+
+.icon--filter{
+    width: 100px;
+}
+
+/* bikes */
 .bikes-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-.bike-card{
-    width: 150%;
-}
-.img-bike{
-    width: 150%;
-    height: 60%;
+.card-text{
+    color: #727272;
+    font-size: 1rem;
+    margin-bottom: 0;
 }
 
-
-a{
-    color: #000;
-    font-size: 1rem;  
-}
-a:hover{
-    color: #000;
-
+.product-img{
+    width: 100%;
 }
 
-/* Categories section */
-ul{
-   list-style-type: none;
+/* categories  */
+.icon{
+    height: 10px;
+
 }
 li{
-    margin-top: 10px;
+    color:#2F2F2F;
     cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 5px;
+}
+.checkbox-round{
+    appearance: none;
+    background-color: white;
+    border: 1px solid rgb(133, 132, 132);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.3em;
+    margin-right: 3px;
+    outline: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    width: 1.3em;
+}
+.checkbox-round:checked {
+    background-color: rgb(0, 0, 0);
+}
+.a-link{
+    color: #000;
+    font-size: 0.9rem;  
+    margin-left: 5px;
+}
+.a-link:hover{
+    color: #000;
 }
