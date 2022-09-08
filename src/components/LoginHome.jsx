@@ -5,7 +5,7 @@ function LoginHome() {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <div>
+    <div className="login-home">
       <div className="login-register">
         <button onClick={() => setShowLogin(true)} style={ showLogin ? {borderBottom: "3px solid rgb(255, 166, 0)"}:{borderBottom: "3px solid lightgray"}}>Login</button>
         <button onClick={() => setShowLogin(false)} style={ !showLogin ? {borderBottom: "3px solid rgb(255, 166, 0)"}:{borderBottom: "3px solid lightgray"}}>Register</button>
