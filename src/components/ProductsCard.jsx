@@ -7,13 +7,13 @@ const ProductsCard = ({ productImg }) => {
       <Card style={{ border: "none" }}>
         <Card.Img variant="top" src={productImg} className="product-img" />
         <Card.Body>
-          <Card.Title className="title">RadRunner 2</Card.Title>
-          <Card.Text>
-            <p className="card-text">Electric Utility Bike</p>
-          </Card.Text>
-          <Card.Text>
-            <p className="card-text">For riders 4'11" - 6'2"</p>
-          </Card.Text>
+          <div className="d-flex justify-content-between">
+            <Card.Title className="title">RadRunner 2</Card.Title>
+            <Card.Title>$1.999</Card.Title>
+          </div>
+
+          <Card.Text>Electric Utility Bike</Card.Text>
+          <Card.Text>For riders 4'11" - 6'2"</Card.Text>
         </Card.Body>
       </Card>
     </>

@@ -1,7 +1,7 @@
 /* header */
 .header-container{
     background-color:#FAF9F5 ;
-    padding: 60px;
+    padding: 150px;
 }
 .header-content{
     display: grid;
@@ -22,24 +22,22 @@
 }
 
 /* nav products */
-.nav-products{
+.nav-container{
     background-color: #F1EFE5;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    padding: 20px;
     border-bottom: 2px solid rgb(0, 0, 0,.1);
-}
+    height: 90px;
 
-.nav-filter-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    padding-top: 1rem;
 }
-
-.nav-view{
-    padding-top: 1rem;
+.nav-products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+   ;
+}
+.filter{
+   display: inline;
+   margin-left: 10px; 
 }
 
 button{
@@ -53,22 +51,26 @@ button{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-.card-text{
+
+.card-text {
     color: #727272;
-    font-size: 1rem;
-    margin-bottom: 0;
+    font-size: 0.9rem;
+    margin-top: 0;
 }
 
-.product-img{
-    width: 100%;
+
+/* products and categories container  */
+.products-container{
+    margin: 0 8%;
 }
 
 /* categories  */
-.icon{
-    height: 10px;
 
+.accordion{
+background-color: #fff;
 }
-li{
+
+.category li{
     color:#2F2F2F;
     cursor: pointer;
     margin-top: 10px;
@@ -79,14 +81,12 @@ li{
 .checkbox-round{
     appearance: none;
     background-color: white;
-    border: 1px solid rgb(133, 132, 132);
+    border: 1px solid rgb(79, 76, 76);
     border-radius: 50%;
     cursor: pointer;
     height: 1.3em;
     margin-right: 3px;
-    outline: none;
     vertical-align: middle;
-    -webkit-appearance: none;
     width: 1.3em;
 }
 .checkbox-round:checked {
@@ -99,4 +99,10 @@ li{
 }
 .a-link:hover{
     color: #000;
+}
+
+@media (max-width:999px) {
+    .accordion{
+        display: none;
+    }
 }
