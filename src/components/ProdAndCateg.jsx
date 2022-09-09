@@ -12,7 +12,7 @@ const ProdAndCateg = () => {
       try {
         const result = await axios({
           method: "get",
-          baseURL: `${process.env.REACT_APP_BASE_URL}/products`,
+          baseURL: `${process.env.REACT_APP_API_BASE}/products`,
         });
         setProducts(result.data);
       } catch (error) {
@@ -29,7 +29,7 @@ const ProdAndCateg = () => {
           <div className="col-2 remove-col">
             <CategoriesSection />
           </div>
-          <div className="col-10 col-xs-12 bikes-container">
+          <div className="col col-xs-12 bikes-container">
             {products.map((product, i) => {
               return (
                 <Card style={{ border: "none" }}>

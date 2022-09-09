@@ -14,10 +14,11 @@ function Product() {
 
   useEffect(() => {
     async function getBike() {
-      const response = await axios.get(`http://localhost:8000/products/${params.id}`);
+      const response = await axios.get(`http://localhost:3001/products/${params.id}`);
       if (response) {
         setProduct(response.data);
       }
+      console.log(response);
     }
     getBike();
   }, []);

@@ -1,6 +1,6 @@
 import "./css/Products.css";
 
-import Nav_home from "../components/NavHome";
+import NavHome from "../components/NavHome";
 import ProductsHeader from "../components/ProductsHeader";
 import NavProducts from "../components/NavProducts";
 import ProdAndCateg from "../components/ProdAndCateg";
@@ -10,7 +10,7 @@ import EmailSection from "../components/EmailSection";
 function Products() {
   return (
     <>
-      <Nav_home />
+      <NavHome />
       <ProductsHeader />
       <NavProducts />
       <ProdAndCateg />
