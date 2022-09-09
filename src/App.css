@@ -7,3 +7,12 @@
 body {
   overflow-x: hidden;
 }
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+a li {
+  color: white !important;
+}

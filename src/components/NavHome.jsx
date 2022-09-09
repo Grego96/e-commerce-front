@@ -10,6 +10,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavCart from "./NavCart";
+import { Link } from "react-router-dom";
 
 function Nav_home() {
   const [show, setShow] = useState(false);
@@ -24,7 +25,9 @@ function Nav_home() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="px-5" bg="white">
-        <Navbar.Brand href="/">RAD POWER BIKES</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/">RAD POWER BIKES</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
@@ -57,7 +60,9 @@ function Nav_home() {
                         Our electric bikes have won more awards than any other brand from Electric
                         Bike Review.
                       </p>
-                      <button className="featured-card-button">See all Ebikes</button>
+                      <Link to="/products">
+                        <button className="featured-card-button">See all Ebikes</button>
+                      </Link>
                       <h6>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
