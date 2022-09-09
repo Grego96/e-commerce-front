@@ -305,6 +305,10 @@
   background-color: transparent;
 }
 
+.loginMessage {
+  color: red;
+}
+
 .login-register {
   display: flex;
   justify-content: space-between;

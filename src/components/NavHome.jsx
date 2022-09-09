@@ -33,7 +33,7 @@ function Nav_home() {
               <div className="nav-home-item nav-home-item1">
                 <p className="m-0 p-0 p-lg-3">Ebikes</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom1 d-none d-lg-block"
+                  className="icon icon--arrow-bottom icon--arrow-bottom1 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
@@ -129,7 +129,7 @@ function Nav_home() {
               <div className="nav-home-item">
                 <p className="m-0 p-0 p-lg-3">Accessories</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom2 d-none d-lg-block"
+                  className="icon icon--arrow-bottom icon--arrow-bottom2 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
@@ -149,7 +149,7 @@ function Nav_home() {
               <div className="nav-home-item">
                 <p className="m-0 p-0 p-lg-3">Service & support</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom3 d-none d-lg-block"
+                  className="icon icon--arrow-bottom icon--arrow-bottom3 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"
@@ -169,7 +169,7 @@ function Nav_home() {
               <div className="nav-home-item">
                 <p className="m-0 p-0 p-lg-3">About Rad</p>
                 <svg
-                  class="icon icon--arrow-bottom icon--arrow-bottom4 d-none d-lg-block"
+                  className="icon icon--arrow-bottom icon--arrow-bottom4 d-none d-lg-block"
                   viewBox="0 0 14 8"
                   role="presentation"
                   fill="none"

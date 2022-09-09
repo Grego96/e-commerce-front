@@ -1,22 +1,26 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { storeToken } from "../redux/tokenActions";
+import { storeUser } from "../redux/userActions";
 
 function LoginHome() {
+  const dispatch = useDispatch();
   const [showLogin, setShowLogin] = useState(true);
+
+  const [loginMessage, setLoginMessage] = useState("");
 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
   async function login() {
-    console.log("hola");
-    console.log(process.env.REACT_APP_BASE_URL);
     try {
       const result = await axios({
         method: "post",
-        baseURL: `http://localhost:${process.env.REACT_APP_API_PORT}`,
+        baseURL: `http://localhost:${process.env.REACT_APP_API_PORT}/login`,
         headers: {
-          'Content-type': 'application/json'
+          "Content-type": "application/json",
         },
         data: {
           email: loginEmail,
@@ -24,7 +28,11 @@ function LoginHome() {
         },
       });
       console.log(result);
+      setLoginMessage("");
+      dispatch(storeToken(result.data.token));
+      dispatch(storeUser(result.data.user));
     } catch (error) {
+      setLoginMessage(error.response.data.message);
       console.log(error);
     }
   }
@@ -58,6 +66,7 @@ function LoginHome() {
         style={showLogin ? { visibility: "visible", opacity: 1 } : { visibility: "hidden" }}
       >
         <h6 className="login-title">Sign in</h6>
+        <p className="loginMessage">{loginMessage}</p>
         <label htmlFor="email">Email</label>
         <input
           type="text"
