@@ -1,7 +1,9 @@
 import React from "react";
 import bicycle1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
-
+import { useSelector } from "react-redux";
 function NavCart() {
+  const user = useSelector((state) => state.user.value);
+
   return (
     <div className="cartNav">
       <p className="yourcart">Your cart: 2 Items</p>
@@ -43,6 +45,17 @@ function NavCart() {
           <p>$3,998.00</p>
         </div>
         <button className="featured-card-button">Begin Checkout</button>
+      </div>
+      <div
+        className="notloged"
+        style={
+          Object.keys(user).length === 0 && user.constructor === Object
+            ? { display: "block", opacity: 1 }
+            : { display: "none" }
+        }
+      >
+        <p>you are not loged</p>
+        login?
       </div>
     </div>
   );

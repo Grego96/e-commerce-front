@@ -5,6 +5,7 @@ import FeaturedCollections from "../components/FeaturedCollections";
 import StoryHome from "../components/StoryHome";
 import ServicesHome from "../components/ServicesHome";
 import Footer from "../components/Footer";
+import EmailSection from "../components/EmailSection";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <FeaturedCollections />
       <StoryHome />
       <ServicesHome />
+      <EmailSection />
       <Footer />
     </div>
   );
