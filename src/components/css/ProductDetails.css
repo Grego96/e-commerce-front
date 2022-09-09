@@ -1,12 +1,35 @@
 .details-image-wrapper {
   min-height: 700px;
-  padding: 0.5em;
+  padding: 1em;
+  position: relative;
+  filter: grayscale(100%);
 }
 
 .details-image {
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.1s ease-in-out;
+}
+
+.details-image-wrapper:hover {
+  filter: none;
+  transform: scale(1.02);
+}
+
+.details-image-wrapper:hover .details-text {
+  opacity: 1;
+}
+
+.details-text {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  opacity: 0;
+  transition: 0.2s ease-out;
+  padding: 1em;
+  padding-right: 2em;
 }
 
 .details {

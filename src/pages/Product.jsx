@@ -4,15 +4,35 @@ import ProductDetails from "../components/ProductDetails";
 import ProductSugested from "../components/ProductSugested";
 import Navbar from "../components/NavHome";
 import Footer from "../components/Footer";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function Product() {
+  const [product, setProduct] = useState();
+  const params = useParams();
+
+  useEffect(() => {
+    async function getBike() {
+      const response = await axios.get(`http://localhost:8000/products/${params.id}`);
+      if (response) {
+        setProduct(response.data);
+      }
+    }
+    getBike();
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <ProductHeader />
-      <ProductDetails />
-      <ProductSugested />
-      <Footer />
+      {product && (
+        <>
+          <Navbar />
+          <ProductHeader product={product} />
+          <ProductDetails />
+          <ProductSugested />
+          <Footer />
+        </>
+      )}
     </>
   );
 }

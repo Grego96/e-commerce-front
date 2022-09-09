@@ -17,7 +17,7 @@
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 0;
+  z-index: 1;
 }
 
 .nav-home h1 {
@@ -367,4 +367,69 @@
 
 .navbar-toggler span {
  background-image: url("../../img/others/menu-hamburguesa.png") !important;
+}
+
+.yourcart {
+  padding-bottom: 30px;
+}
+
+.cartItem .img-info {
+  display: flex;
+}
+
+.cartItem {
+  margin-bottom: 40px;
+  border-bottom: 1px solid gray;
+}
+
+.cartItem img {
+  width: 100px;
+  height: 80px;
+}
+
+.cartItem .cartInfo {
+  margin-left: 15px;
+}
+
+.cartItem .cartInfo h4{
+  font-size: 1rem;
+}
+
+.cartItem .cartInfo p{
+  font-size: 0.8rem;
+}
+
+.cartItem .cartButtons {
+  display: flex;
+  align-items: center;
+}
+
+.cartItem .cartButtons p{
+ padding-top: 5px;
+ margin:0 10px;
+}
+
+.cartItem .cartButtons button{
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: var(--main-bg-color);
+  color: rgb(53, 52, 52);
+  
+}
+
+.cartItem .cartButtons .countButtons {
+  width: 30px;
+  height: 30px;
+}
+
+.cartItem .cartButtons .countRbuttons {
+  margin-left: 100px;
+  /* height: 30px; */
+  padding: 8px;
+}
+
+.subtotalP {
+  display: flex;
+  justify-content: space-between;
 }

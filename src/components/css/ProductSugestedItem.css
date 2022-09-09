@@ -32,3 +32,11 @@
 .suggested-item:hover .suggested-image-two {
   opacity: 1;
 }
+
+.suggested-item:hover .suggested-item-text {
+  transform: scale(1.05);
+}
+
+.suggested-item-text {
+  transition: 0.2s ease-in-out;
+}

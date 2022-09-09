@@ -6,8 +6,12 @@ import calendar from "../img/icons/calendar.svg";
 import shield from "../img/icons/shield.svg";
 import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
+import ServiceItem from "./ProductServiceItem";
+import { useState } from "react";
 
-function ProductHeader() {
+function ProductHeader({ product }) {
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <>
       <section className="container-fluid ">
@@ -19,47 +23,44 @@ function ProductHeader() {
           </div>
           <div className="product-info col-lg-6">
             <div>
-              <div className="up-title">Electric City Bike</div>
-              <h3>RadCity 4 High-Step</h3>
+              <div className="up-title">{product.category.name}</div>
+              <h3>{product.name}</h3>
               <div className="product-price-wrapper">
-                <div className="product-price">$1,399</div>
+                <div className="product-price">${product.price}</div>
               </div>
-              <p>
-                Dirt path or down pavement, our award-winning commuter ebike is many Rad riders'
-                pick for "all-around" ebike. It's high-step frame design delivers a traditional
-                ride-feel; commute to work and back with the power of a 750W motor, and up to 45+
-                miles per charge.
-              </p>
+              <p>{product.description}</p>
               <div className="d-flex justify-content-around my-4">
-                <div className="text-center">
-                  <img src={calendar} alt="" />
-                  <div className="fw-bold">14-day free trial</div>
-                </div>
-                <div className="text-center">
-                  <img src={shield} alt="" />
-                  <div className="fw-bold">1 year warranty</div>
-                </div>
-                <div className="text-center">
-                  <img src={headphones} alt="" />
-                  <div className="fw-bold">Ask our experts</div>
-                </div>
+                <ServiceItem img={calendar} text={"14-day free trial"} />
+                <ServiceItem img={shield} text={"1 year warranty"} />
+                <ServiceItem img={headphones} text={"Ask our experts"} />
               </div>
             </div>
             <div className="buy-product-wrapper">
               <div className="quantity-wrapper">
-                <div className="quantity-modifier">
-                  <img src={minus} alt="" class="quantity-icon"></img>
+                <div
+                  className="quantity-modifier"
+                  onClick={() => {
+                    if (quantity > 1) setQuantity(quantity - 1);
+                  }}
+                >
+                  <img src={minus} alt="" className="quantity-icon"></img>
                 </div>
                 <input
                   type="number"
                   min="1"
-                  defaultValue={1}
+                  value={quantity}
                   name=""
                   id=""
                   className="product-quantity"
+                  readOnly
                 />
-                <div className="quantity-modifier">
-                  <img src={plus} alt="" class="quantity-icon" />
+                <div
+                  className="quantity-modifier"
+                  onClick={() => {
+                    setQuantity(quantity + 1);
+                  }}
+                >
+                  <img src={plus} alt="" className="quantity-icon" />
                 </div>
               </div>
               <button type="" className="add-to-cart-button">
