@@ -97,8 +97,10 @@ p {
   width: 100%;
   padding: 0.2em;
   transition: background-color 0.1s ease-in-out;
+  min-width: 100px;
 }
 
-.add-to-cart-button:hover {
-  background-color: rgba(255, 195, 116, 0.8);
+.add-to-cart-button:hover,
+.quantity-wrapper:hover {
+  background-color: var(--seg-bg-color);
 }

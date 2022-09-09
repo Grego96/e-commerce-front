@@ -7,7 +7,11 @@ import shield from "../img/icons/shield.svg";
 import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
 import ServiceItem from "./ProductServiceItem";
-function ProductHeader() {
+import { useState } from "react";
+
+function ProductHeader({ product }) {
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <>
       <section className="container-fluid ">
@@ -19,17 +23,12 @@ function ProductHeader() {
           </div>
           <div className="product-info col-lg-6">
             <div>
-              <div className="up-title">Electric City Bike</div>
-              <h3>RadCity 4 High-Step</h3>
+              <div className="up-title">{product.category.name}</div>
+              <h3>{product.name}</h3>
               <div className="product-price-wrapper">
-                <div className="product-price">$1,399</div>
+                <div className="product-price">${product.price}</div>
               </div>
-              <p>
-                Dirt path or down pavement, our award-winning commuter ebike is many Rad riders'
-                pick for "all-around" ebike. It's high-step frame design delivers a traditional
-                ride-feel; commute to work and back with the power of a 750W motor, and up to 45+
-                miles per charge.
-              </p>
+              <p>{product.description}</p>
               <div className="d-flex justify-content-around my-4">
                 <ServiceItem img={calendar} text={"14-day free trial"} />
                 <ServiceItem img={shield} text={"1 year warranty"} />
@@ -38,18 +37,29 @@ function ProductHeader() {
             </div>
             <div className="buy-product-wrapper">
               <div className="quantity-wrapper">
-                <div className="quantity-modifier">
+                <div
+                  className="quantity-modifier"
+                  onClick={() => {
+                    if (quantity > 1) setQuantity(quantity - 1);
+                  }}
+                >
                   <img src={minus} alt="" className="quantity-icon"></img>
                 </div>
                 <input
                   type="number"
                   min="1"
-                  defaultValue={1}
+                  value={quantity}
                   name=""
                   id=""
                   className="product-quantity"
+                  readOnly
                 />
-                <div className="quantity-modifier">
+                <div
+                  className="quantity-modifier"
+                  onClick={() => {
+                    setQuantity(quantity + 1);
+                  }}
+                >
                   <img src={plus} alt="" className="quantity-icon" />
                 </div>
               </div>
