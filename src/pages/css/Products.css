@@ -12,6 +12,8 @@
 
 .header-title{
     font-size: 4rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -73,13 +75,11 @@ button{
 
 
 /* categories  */
-.accordion{
-background-color: #fff;
+.accordion-button:not(.collapsed){
+    background-color: #fff;
+    color: #000;
 }
 
-.category{
-    padding: 0;
-}
 
 .category li{
     color:#2F2F2F;
@@ -133,7 +133,6 @@ background-color: #fff;
 .email{
     border: 1px solid rgb(175, 172, 172);
     border-radius: 20px;
-   
     padding: 10px;
     width: 30%;
 }
@@ -142,19 +141,8 @@ background-color: #fff;
     text-align: center;
 }
 
-/* medias header */
-@media (max-width:800px) {
-    .header-img{
-        width: 100%;
-    }
-}
-@media (max-width:800px) {
-    .header-text{
-        display: none;
-    }
-}
 
-/* medias categories */
+/* medias 960px */
 @media (max-width:960px) {
     .accordion{
         display: none;
@@ -162,7 +150,27 @@ background-color: #fff;
     .remove-col{
         display: none;
     }
+    .header-content{
+        display: none;
+    }
 }
+@media (min-width:960px) {
+    .carousel{
+        display: none;
+    }
+}
+
+/* medias 800px */
+@media (max-width:800px) {
+    .header-img{
+        width: 100%;
+    }
+    .header-text{
+        display: none;
+    }
+}
+
+/* media 768px */
 @media (max-width:768px) {
     .header-content{
         grid-template-columns: repeat(2, 1fr);
@@ -175,6 +183,7 @@ background-color: #fff;
     }
 }
 
+/* medias 500px */
 @media (max-width:500px){
     .bikes-container{
         grid-template-columns: repeat(1, 1fr);

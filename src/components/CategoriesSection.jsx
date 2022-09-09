@@ -73,7 +73,6 @@ const CategoriesSection = () => {
               <input type="checkbox" name="Cargo" className="checkbox-round" />
               <label htmlFor="Cargo">Step-Thru</label>
             </li>
-
             <a href="/" className="a-link">
               What's the difference?
             </a>

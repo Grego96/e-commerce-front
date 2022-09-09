@@ -9,9 +9,7 @@ const NavProducts = () => {
           <img src={svg} alt="Filter" style={{ width: "25px" }} />
           <h5 className="filter">Filter</h5>
         </div>
-
         <span>11 results</span>
-
         <button>
           Sort by <strong>Featured</strong>
         </button>
