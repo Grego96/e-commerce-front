@@ -8,6 +8,7 @@ import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
 import ServiceItem from "./ProductServiceItem";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductHeader({ product }) {
   const [quantity, setQuantity] = useState(1);
@@ -16,7 +17,9 @@ function ProductHeader({ product }) {
     <>
       {console.log(product)}
       <section className="container-fluid ">
-        <div className="go-back">{/* <a href="">Go back</a> */}</div>
+        <div className="go-back">
+          <Link to="/">Go back</Link>
+        </div>
         <div className="row">
           <div className="product-images col-lg-6">
             <img src={img1} alt="" className="bg-light mb-3" />
