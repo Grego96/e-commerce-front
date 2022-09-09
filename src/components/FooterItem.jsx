@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function FooterItem({ title, items }) {
   return (
     <div className="col-md-3 py-5">
@@ -5,7 +7,9 @@ function FooterItem({ title, items }) {
       <div className="footer-item-list">
         <ul className="list-unstyled">
           {items.map((i, key) => (
-            <li key={key}>{i}</li>
+            <Link to="/products">
+              <li key={key}>{i}</li>
+            </Link>
           ))}
         </ul>
       </div>
