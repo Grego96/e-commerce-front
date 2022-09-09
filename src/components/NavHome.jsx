@@ -9,12 +9,17 @@ import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavCart from "./NavCart";
 
 function Nav_home() {
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
   return (
     <div>
@@ -107,7 +112,7 @@ function Nav_home() {
                         <NavCardProduct img={bicycle4} categorie={"Folding"} />
                       </div>
                       <div className="col-md-6">
-                        <NavCardProduct img={bicycle1} categorie={"Step-thru"} />
+                        <NavCardProduct img={bicycle3} categorie={"Step-thru"} />
                       </div>
                     </div>
                   </div>
@@ -213,6 +218,9 @@ function Nav_home() {
               </Nav.Link>
               <Nav.Link className="px-2">
                 <svg
+                  onClick={() => {
+                    handleShow2();
+                  }}
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -251,6 +259,12 @@ function Nav_home() {
         <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>
           <LoginHome />
+        </Offcanvas.Body>
+      </Offcanvas>
+      <Offcanvas show={show2} onHide={handleClose2} placement="end">
+        <Offcanvas.Header closeButton></Offcanvas.Header>
+        <Offcanvas.Body>
+          <NavCart />
         </Offcanvas.Body>
       </Offcanvas>
     </div>
