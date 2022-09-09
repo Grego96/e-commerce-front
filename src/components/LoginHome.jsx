@@ -126,7 +126,9 @@ function LoginHome() {
             : { visibility: "hidden" }
         }
       >
-        <p>loged as: {user.first_name} {user.last_name}</p>
+        <p>
+          loged as: {user.first_name} {user.last_name}
+        </p>
       </div>
     </div>
   );
