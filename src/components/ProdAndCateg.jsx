@@ -30,7 +30,7 @@ const ProdAndCateg = () => {
             <CategoriesSection />
           </div>
           <div className="col-10 col-xs-12 bikes-container">
-            {products.map((product) => {
+            {products.map((product, i) => {
               return (
                 <Card style={{ border: "none" }}>
                   <Card.Img variant="top" src={product1} className="product-img" />
