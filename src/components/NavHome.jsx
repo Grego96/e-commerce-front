@@ -22,7 +22,7 @@ function Nav_home() {
   const handleShow2 = () => setShow2(true);
 
   return (
-    <div>
+    <>
       <Navbar collapseOnSelect expand="lg" sticky="top" className="px-5" bg="white">
         <Navbar.Brand href="/">RAD POWER BIKES</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -267,7 +267,7 @@ function Nav_home() {
           <NavCart />
         </Offcanvas.Body>
       </Offcanvas>
-    </div>
+    </>
   );
 }
 
