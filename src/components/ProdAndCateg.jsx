@@ -12,7 +12,7 @@ const ProdAndCateg = () => {
       try {
         const result = await axios({
           method: "get",
-          baseURL: `${process.env.REACT_APP_BASE_URL}/products`,
+          baseURL: `${process.env.REACT_APP_API_BASE}/products`,
         });
         setProducts(result.data);
       } catch (error) {

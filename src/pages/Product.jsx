@@ -14,7 +14,10 @@ function Product() {
 
   useEffect(() => {
     async function getBike() {
-      const response = await axios.get(`http://localhost:8000/products/${params.id}`);
+      const response = await axios({
+        method: "get",
+        baseURL: `${process.env.REACT_APP_API_BASE}/products/${params.id}`,
+      });
       if (response) {
         setProduct(response.data);
       }

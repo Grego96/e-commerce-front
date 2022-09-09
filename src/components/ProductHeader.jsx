@@ -14,6 +14,7 @@ function ProductHeader({ product }) {
 
   return (
     <>
+      {console.log(product)}
       <section className="container-fluid ">
         <div className="go-back">{/* <a href="">Go back</a> */}</div>
         <div className="row">
