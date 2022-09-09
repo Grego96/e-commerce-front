@@ -4,8 +4,8 @@ function FooterItem({ title, items }) {
       <div className="footer-item-header">{title}</div>
       <div className="footer-item-list">
         <ul className="list-unstyled">
-          {items.map((i) => (
-            <li>{i}</li>
+          {items.map((i, key) => (
+            <li key={key}>{i}</li>
           ))}
         </ul>
       </div>

@@ -19,7 +19,6 @@
 
 .product-info {
   position: sticky;
-  z-index: -1;
   top: 110px;
   height: 100%;
 }
@@ -50,11 +49,11 @@ p {
   padding-left: 0.5em;
   align-items: center;
   border-radius: 40px;
-  background-color: black;
+  background-color: var(--main-bg-color);
 }
 
 .product-quantity {
-  color: white;
+  color: black;
   width: 38px;
   margin-bottom: 0;
   padding: 0.5em 0;
@@ -91,9 +90,17 @@ p {
 }
 
 .add-to-cart-button {
-  background-color: black;
-  color: white;
+  background-color: var(--main-bg-color);
+  border: 0;
+  color: black;
   border-radius: 40px;
   width: 100%;
   padding: 0.2em;
+  transition: background-color 0.1s ease-in-out;
+  min-width: 100px;
+}
+
+.add-to-cart-button:hover,
+.quantity-wrapper:hover {
+  background-color: var(--seg-bg-color);
 }
