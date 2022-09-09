@@ -8,7 +8,7 @@ import { storeUser } from "../redux/userActions";
 function LoginHome() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
-  
+
   const [showLogin, setShowLogin] = useState(true);
   const [showRegister, setShowRegister] = useState(false);
 
@@ -21,7 +21,7 @@ function LoginHome() {
     try {
       const result = await axios({
         method: "post",
-        baseURL: `http://localhost:${process.env.REACT_APP_API_PORT}/login`,
+        baseURL: `${process.env.REACT_APP_API_BASE}/login`,
         headers: {
           "Content-type": "application/json",
         },
