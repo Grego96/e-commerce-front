@@ -16,13 +16,14 @@ function Product() {
     async function getBike() {
       const response = await axios({
         method: "get",
-        baseURL: `${process.env.REACT_APP_API_BASE}/products/${params.id}`,
+        baseURL: `${process.env.REACT_APP_API_BASE}/products/${params.slug}`,
       });
       if (response) {
         setProduct(response.data);
       }
     }
     getBike();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

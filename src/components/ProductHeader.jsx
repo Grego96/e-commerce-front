@@ -15,7 +15,6 @@ function ProductHeader({ product }) {
 
   return (
     <>
-      {console.log(product)}
       <section className="container-fluid ">
         <div className="go-back">
           <Link to="/">Go back</Link>
@@ -27,7 +26,7 @@ function ProductHeader({ product }) {
           </div>
           <div className="product-info col-lg-6">
             <div>
-              <div className="up-title">{product.category.name}</div>
+              {/* <div className="up-title">{product.category.name}</div> */}
               <h3>{product.name}</h3>
               <div className="product-price-wrapper">
                 <div className="product-price">${product.price}</div>
