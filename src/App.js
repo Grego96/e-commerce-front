@@ -8,13 +8,14 @@ import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/products" element={<Products />} />
-      <Route path="/products/:id" element={<Product />} />
+      <Route path="/products/:slug" element={<Product />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/about" element={<About />} />
       {/* Privadas */}
@@ -22,6 +23,7 @@ function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/dashboard" element={<Dashboard />} />
       {/* Privadas */}
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 }

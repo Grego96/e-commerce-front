@@ -14,7 +14,7 @@ function Products() {
       <ProductsHeader />
       <NavProducts />
       <ProdAndCateg />
-      <EmailSection />
+      {/* <EmailSection /> */}
       <Footer />
     </>
   );

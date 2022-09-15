@@ -115,7 +115,6 @@ function LoginHome() {
           <label htmlFor="password">Password:</label>
           <input type="password" />
           <button className="login-button">Register</button>
-          <p>Forgot your password?</p>
         </div>
       </div>
       <div
@@ -127,7 +126,7 @@ function LoginHome() {
         }
       >
         <p>
-          loged as: {user.first_name} {user.last_name}
+          Loged as: {user.first_name} {user.last_name}
         </p>
       </div>
     </div>

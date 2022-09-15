@@ -7,8 +7,8 @@ function FooterItem({ title, items }) {
       <div className="footer-item-list">
         <ul className="list-unstyled">
           {items.map((i, key) => (
-            <Link to="/products">
-              <li key={key}>{i}</li>
+            <Link key={key} to="/products">
+              <li>{i}</li>
             </Link>
           ))}
         </ul>

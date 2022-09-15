@@ -12,7 +12,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavCart from "./NavCart";
 import { Link } from "react-router-dom";
 
-function Nav_home() {
+function NavHome() {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
 
@@ -132,7 +132,9 @@ function Nav_home() {
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
-                <p className="m-0 p-0 p-lg-3">Accessories</p>
+                <p className="m-0 p-0 p-lg-3">
+                  <Link to="/about">About This Project</Link>
+                </p>
                 <svg
                   className="icon icon--arrow-bottom icon--arrow-bottom2 d-none d-lg-block"
                   viewBox="0 0 14 8"
@@ -276,4 +278,4 @@ function Nav_home() {
   );
 }
 
-export default Nav_home;
+export default NavHome;

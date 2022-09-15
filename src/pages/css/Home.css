@@ -255,6 +255,18 @@
   background-color: var(--seg-bg-color);
 }
 
+.checkout{
+  border: none;
+  background-color: var(--main-bg-color);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.checkout:hover{
+  background-color: rgb(255, 132, 0);
+}
 /* story home */
 
 .story-img {
@@ -448,6 +460,7 @@
 }
 
 .cartItem .cartButtons .countRbuttons {
+  background-color: #fff;
   margin-left: 100px;
   /* height: 30px; */
   padding: 8px;

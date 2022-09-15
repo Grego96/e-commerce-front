@@ -1,0 +1,42 @@
+.row{
+    margin-bottom: 80px;
+
+}
+.left-col{
+    border-right: 1px solid #C8C9CA;
+}
+
+.button{
+    background-color: orange;
+    border: 1px solid orange;
+    color:#000
+}
+
+.payment{
+    margin-top: 50px;
+}
+
+
+.personal-data ul{
+    list-style-type: none;
+}
+
+.subtitle{
+    color: orange;
+}
+
+.checkbox-round{
+    appearance: none;
+    background-color: white;
+    border: 1px solid rgb(216, 106, 22);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1em;
+    margin-right: 3px;
+    vertical-align: middle;
+    width: 1em;
+}
+
+.checkbox-round:checked {
+    background-color: rgba(255, 153, 0, 0.93);
+}

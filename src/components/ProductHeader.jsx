@@ -8,15 +8,25 @@ import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
 import ServiceItem from "./ProductServiceItem";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { add } from "../redux/cartActions";
 
 function ProductHeader({ product }) {
+  const store = useSelector((state) => state.cart);
   const [quantity, setQuantity] = useState(1);
 
+  const dispatch = useDispatch();
+
+  function handleAdd() {
+    dispatch(add(product));
+  }
   return (
     <>
-      {console.log(product)}
       <section className="container-fluid ">
-        <div className="go-back">{/* <a href="">Go back</a> */}</div>
+        <div className="go-back">
+          <Link to="/">Go back</Link>
+        </div>
         <div className="row">
           <div className="product-images col-lg-6">
             <img src={img1} alt="" className="bg-light mb-3" />
@@ -24,7 +34,7 @@ function ProductHeader({ product }) {
           </div>
           <div className="product-info col-lg-6">
             <div>
-              <div className="up-title">{product.category.name}</div>
+              {/* <div className="up-title">{product.category.name}</div> */}
               <h3>{product.name}</h3>
               <div className="product-price-wrapper">
                 <div className="product-price">${product.price}</div>
@@ -64,7 +74,7 @@ function ProductHeader({ product }) {
                   <img src={plus} alt="" className="quantity-icon" />
                 </div>
               </div>
-              <button type="" className="add-to-cart-button">
+              <button type="" className="add-to-cart-button" onClick={handleAdd}>
                 Add to my cart
               </button>
             </div>

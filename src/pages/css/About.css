@@ -1,0 +1,76 @@
+/* header */
+.main-container{
+    background-color: #FAF9F5;
+    padding: 80px;
+}
+
+.main-container h1{
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.main-text{
+    font-size: 1.5rem;
+}
+
+
+span, strong{
+    color: rgb(255, 145, 0);
+}
+
+/* planning and technologies  */
+
+.content-container{
+    margin: 6% 20%;
+}
+
+.content-container h2{
+    color: #2e2e2e;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.planning-text{
+    font-size: 1.3rem;
+}
+
+h3{
+    color: #393939;
+}
+
+.technologies{
+    background-color: #FAF9F5;
+    padding: 1px;
+}
+.techno-container{
+  display: flex;
+    text-align: center;
+}
+
+.techno-container img{
+    width: 80px;
+}
+
+
+/* team */
+.team-container{
+    display: flex;
+    text-align: center;
+}
+
+.team-container img{
+width: 200px;
+}
+
+.animation:hover{
+    animation: pulse; 
+    animation-duration: 2.5s
+}
+
+/* .animation-svg:hover{
+    animation: bounceIn; 
+    animation-duration: 2.5s
+
+} */
