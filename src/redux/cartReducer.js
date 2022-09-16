@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { add, substract, addAddress } from "./cartActions";
+import { add, substract, addAddress, remove } from "./cartActions";
 
 const initialState = {
   value: {
@@ -15,13 +15,16 @@ const initialState = {
 
 const cartReducer = createReducer(initialState, (builder) => {
   builder.addCase(add, (state, action) => {
-    const product = state.value.product_json.find((p) => p.product.id === action.payload.id);
+    const product = state.value.product_json.find(
+      (p) => p.product.id === action.payload.product.id,
+    );
+    console.log(action.payload);
     if (product) {
-      product.quantity++;
+      product.quantity += action.payload.quantity;
     } else {
       state.value.product_json.push({
-        quantity: 1,
-        product: action.payload,
+        quantity: action.payload.quantity,
+        product: action.payload.product,
       });
     }
   });
@@ -43,6 +46,10 @@ const cartReducer = createReducer(initialState, (builder) => {
       const newCart = state.value.product_json.filter((p) => p.product.id !== action.payload.id);
       state.value.product_json = newCart;
     }
+  });
+  builder.addCase(remove, (state, action) => {
+    const newCart = state.value.product_json.filter((p) => p.product.id !== action.payload.id);
+    state.value.product_json = newCart;
   });
 });
 

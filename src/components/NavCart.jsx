@@ -1,20 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bicycle1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
 import { useDispatch, useSelector } from "react-redux";
-import { add, substract } from "../redux/cartActions";
+import { add, substract, remove } from "../redux/cartActions";
 import { Link } from "react-router-dom";
 
 function NavCart() {
   const user = useSelector((state) => state.user.value);
   const cart = useSelector((state) => state.cart.value);
+  const [total, setTotal] = useState(0);
+
+  let auxTotal = 0;
+
+  for (const product of cart.product_json) {
+    auxTotal = auxTotal + product.product.price * product.quantity;
+  }
+  useEffect(() => {
+    setTotal(auxTotal);
+  }, [cart]);
 
   const dispatch = useDispatch();
 
-  function handleAdd(p) {
-    dispatch(add(p));
+  function handleAdd(product, quantity) {
+    dispatch(
+      add({
+        product,
+        quantity,
+      }),
+    );
   }
-  function handleRemove(p) {
+  function handleSubstract(p) {
     dispatch(substract(p));
+  }
+
+  function handleRemove(p) {
+    dispatch(remove(p));
   }
 
   return (
@@ -30,15 +49,15 @@ function NavCart() {
               </div>
             </div>
             <div className="cartButtons">
-              <button className="countButtons" onClick={() => handleRemove(p.product)}>
+              <button className="countButtons" onClick={() => handleSubstract(p.product)}>
                 -
               </button>
               <p>{p.quantity}</p>
-              <button className="countButtons " onClick={() => handleAdd(p.product)}>
+              <button className="countButtons" onClick={() => handleAdd(p.product, 1)}>
                 +
               </button>
               <p>${p.product.price}</p>
-              <button className="countRbuttons ">
+              <button className="countRbuttons" onClick={() => handleRemove(p.product)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -76,7 +95,7 @@ function NavCart() {
       <div className="subtotal">
         <div className="subtotalP">
           <p>Subtotal:</p>
-          <p>$3,998.00</p>
+          <p>${total}</p>
         </div>
         <Link to="/checkout">
           <button className="checkout">Begin Checkout</button>

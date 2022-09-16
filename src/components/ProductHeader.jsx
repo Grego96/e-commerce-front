@@ -18,8 +18,13 @@ function ProductHeader({ product }) {
 
   const dispatch = useDispatch();
 
-  function handleAdd() {
-    dispatch(add(product));
+  function handleAdd(product, quantity) {
+    dispatch(
+      add({
+        product,
+        quantity,
+      }),
+    );
   }
   return (
     <>
@@ -74,7 +79,13 @@ function ProductHeader({ product }) {
                   <img src={plus} alt="" className="quantity-icon" />
                 </div>
               </div>
-              <button type="" className="add-to-cart-button" onClick={handleAdd}>
+              <button
+                type=""
+                className="add-to-cart-button"
+                onClick={() => {
+                  handleAdd(product, quantity);
+                }}
+              >
                 Add to my cart
               </button>
             </div>
