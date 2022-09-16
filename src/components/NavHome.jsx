@@ -1,10 +1,10 @@
 import React from "react";
-import NavCardProduct from "./NavCardProduct";
+// import NavCardProduct from "./NavCardProduct";
 import LoginHome from "./LoginHome";
-import bicycle1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
-import bicycle2 from "../img/bicycles/RadCity 5 Plus Electric Commuter Bike/City5STCharcoal_side.png";
-import bicycle3 from "../img/bicycles/RadExpand 5 Electric Folding Bike/ExpandBlack_Side.png";
-import bicycle4 from "../img/bicycles/RadMission Electric Hybrid Bike/MissionMS_white_side.png";
+// import bicycle1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
+// import bicycle2 from "../img/bicycles/RadCity 5 Plus Electric Commuter Bike/City5STCharcoal_side.png";
+// import bicycle3 from "../img/bicycles/RadExpand 5 Electric Folding Bike/ExpandBlack_Side.png";
+// import bicycle4 from "../img/bicycles/RadMission Electric Hybrid Bike/MissionMS_white_side.png";
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
@@ -34,7 +34,9 @@ function NavHome() {
           <Nav className="me-auto">
             <Nav.Link>
               <div className="nav-home-item nav-home-item1">
-                <p className="m-0 p-0 p-lg-3">Ebikes</p>
+                <Link to="/products">
+                  <p className="m-0 p-0 p-lg-3">Ebikes</p>
+                </Link>
                 <svg
                   className="icon icon--arrow-bottom icon--arrow-bottom1 d-none d-lg-block"
                   viewBox="0 0 14 8"
@@ -51,7 +53,7 @@ function NavHome() {
                   ></path>
                 </svg>
               </div>
-              <div className="menu-hover1">
+              {/* <div className="menu-hover1">
                 <div className="row">
                   <div className="col-md-3">
                     <div className="left-menu">
@@ -128,7 +130,7 @@ function NavHome() {
                     necessitatibus!
                   </div>
                 </div>
-              </div>
+              </div> */}
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
