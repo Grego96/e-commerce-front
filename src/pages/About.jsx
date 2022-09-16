@@ -132,7 +132,11 @@ function About() {
           <h2>Our Team</h2>
           <div className="team-container">
             <div className="col-lg-4 avatar-container">
-              <img src={avatar} alt="Avatar" className="animation" />
+              <img
+                src="https://images-ext-1.discordapp.net/external/hjlhvFgriDhKZfbtEfx8JNTj4lkVW292eTV-8S57C2Q/%3Fe%3D1668643200%26v%3Dbeta%26t%3DV5gB-38tGCWa9U2baIRyk8FLbDgHGjdiLMAP7VUnHfM/https/media-exp1.licdn.com/dms/image/C4D03AQG_S3d0eS-2qg/profile-displayphoto-shrink_800_800/0/1660853214812"
+                alt="Avatar"
+                className="animation"
+              />
               <h4>Manuel Perera</h4>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +167,11 @@ function About() {
               </a>
             </div>
             <div className="col-lg-4 avatar-container">
-              <img src={avatar} alt="Avatar" className="animation avatar-img" />
+              <img
+                src="https://cdn.discordapp.com/attachments/834507129087328307/1020402423396835358/photostudio-2-designify.png"
+                alt="Avatar"
+                className="animation avatar-img"
+              />
               <h4>Gregory Hunkeler</h4>
               <a href="https://github.com/Grego96" target="blank">
                 <svg
@@ -195,7 +203,11 @@ function About() {
               </a>
             </div>
             <div className="col-lg-4 avatar-container">
-              <img src={avatar} alt="Avatar" className="animation avatar-img" />
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C5603AQGMwyxbo-lYOw/profile-displayphoto-shrink_800_800/0/1634604798030?e=1668643200&v=beta&t=dtnvqIhh9zs99OyVaRDp3EbFYr8Z6ZUFEL1U4vwJ_4A"
+                alt="Avatar"
+                className="animation avatar-img"
+              />
               <h4>Tayra Cutri</h4>
               <a href="https://github.com/tayracutri" target="blank">
                 <svg
