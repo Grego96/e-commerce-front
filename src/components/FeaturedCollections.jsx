@@ -30,10 +30,10 @@ function FeaturedCollections() {
       </div>
       <div className="container">
         <div className="row g-0">
-          <div className="col-md-6 ">
+          <div className="col-xl-6 ">
             <img className="featured-img-left" src={leftImg} alt="" />
           </div>
-          <div className="col-md-6">
+          <div className="col-xl-6">
             <div className="row">
               {outstading.map((product, i) => {
                 return (
