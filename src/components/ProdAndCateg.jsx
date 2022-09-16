@@ -37,9 +37,7 @@ const ProdAndCateg = () => {
                       <Card.Img
                         variant="top"
                         src={`../img/${product.images.image1}`}
-                        className={`product-img ${
-                          product.images.image1 === "defaultImage.png" ? "defaultImage" : ""
-                        }`}
+                        className="product-img"
                       />
                       <Card.Body>
                         <div className="d-flex justify-content-between">
