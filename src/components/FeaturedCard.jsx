@@ -13,7 +13,7 @@ function FeaturedCard({ product }) {
 
   return (
     <div className="featured-card">
-      <img src={`../img/bicycles/${product.images.image1}`} alt="" className="right-img-card" />
+      <img src={`../img/${product.images.image1}`} alt="" className="right-img-card" />
       {/* <img src={`../img/bicycles/${img}`} alt="" className="right-img-card" /> */}
       <h6>{product.name}</h6>
       <p>{shortText(product.description, 100, "...")}</p>

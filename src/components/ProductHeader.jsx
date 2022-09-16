@@ -1,5 +1,3 @@
-import img1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_angle.png";
-import img2 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
 import minus from "../img/icons/minus.svg";
 import plus from "../img/icons/plus.svg";
 import calendar from "../img/icons/calendar.svg";
@@ -9,11 +7,10 @@ import "./css/ProductHeader.css";
 import ServiceItem from "./ProductServiceItem";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { add } from "../redux/cartActions";
 
 function ProductHeader({ product }) {
-  const store = useSelector((state) => state.cart);
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
@@ -34,8 +31,8 @@ function ProductHeader({ product }) {
         </div>
         <div className="row">
           <div className="product-images col-lg-6">
-            <img src={img1} alt="" className="bg-light mb-3" />
-            <img src={img2} alt="" className="bg-light mb-3" />
+            <img src={`../img/${product.images.image1}`} alt="" className="bg-light mb-3" />
+            <img src={`../img/${product.images.image2}`} alt="" className="bg-light mb-3" />
           </div>
           <div className="product-info col-lg-6">
             <div>
