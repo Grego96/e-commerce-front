@@ -18,7 +18,7 @@
 }
 
 .header-img{
-    width: 70%;
+    width: 80%;
 }
 
 .header-text{
@@ -96,10 +96,10 @@ button{
     border: 1px solid rgb(79, 76, 76);
     border-radius: 50%;
     cursor: pointer;
-    height: 1.3em;
+    height: 1em;
     margin-right: 3px;
     vertical-align: middle;
-    width: 1.3em;
+    width: 1em;
 }
 
 .checkbox-round:checked {
@@ -152,6 +152,9 @@ button{
     }
     .header-content{
         display: none;
+    }
+    .header-container{
+        padding: 20px;
     }
 }
 @media (min-width:960px) {

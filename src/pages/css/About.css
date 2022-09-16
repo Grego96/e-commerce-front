@@ -64,11 +64,36 @@ h3{
 width: 200px;
 }
 
+
+
 .animation:hover{
     animation: pulse; 
     animation-duration: 2.5s
 }
+@media (max-width:900px) {
+    .team-container{
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width:800px) {
+    .techno-container{
+        flex-direction: column-reverse;
+        
+    }
+    .avatar-container{
+        margin-top: 30px;
+    }
+    .main-text{
+        display: none;
+    }
+    
+}
 
+@media (max-width:1198px) {
+    .planning-design{
+        margin-top: 100px;
+    }
+}
 /* .animation-svg:hover{
     animation: bounceIn; 
     animation-duration: 2.5s

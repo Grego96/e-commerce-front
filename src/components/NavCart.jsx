@@ -1,7 +1,7 @@
 import React from "react";
 import bicycle1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
 import { useDispatch, useSelector } from "react-redux";
-import { add, remove } from "../redux/cartActions";
+import { add, substract } from "../redux/cartActions";
 import { Link } from "react-router-dom";
 
 function NavCart() {
@@ -14,7 +14,7 @@ function NavCart() {
     dispatch(add(p));
   }
   function handleRemove(p) {
-    dispatch(remove(p));
+    dispatch(substract(p));
   }
 
   return (
@@ -30,7 +30,7 @@ function NavCart() {
               </div>
             </div>
             <div className="cartButtons">
-              <button className="countButtons" onClick={handleRemove}>
+              <button className="countButtons" onClick={() => handleRemove(p.product)}>
                 -
               </button>
               <p>{p.quantity}</p>

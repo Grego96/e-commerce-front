@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { add, remove, addAddress } from "./cartActions";
+import { add, substract, addAddress } from "./cartActions";
 
 const initialState = {
   value: {
@@ -34,7 +34,16 @@ const cartReducer = createReducer(initialState, (builder) => {
     state.value.postal_code = action.payload.postal_code;
   });
 
-  builder.addCase(remove, (state, action) => {});
+  builder.addCase(substract, (state, action) => {
+    const product = state.value.product_json.find((p, i) => p.product.id === action.payload.id);
+    if (product.quantity > 1) {
+      product.quantity--;
+    } else {
+      // product.slice(i,1)
+      const newCart = state.value.product_json.filter((p) => p.product.id !== action.payload.id);
+      state.value.product_json = newCart;
+    }
+  });
 });
 
 export default cartReducer;

@@ -38,14 +38,12 @@ function Checkout() {
   return (
     <>
       <NavHome />
-      <div style={{ marginLeft: "16%" }}>
+      <div className="container">
         <h1>Checkout</h1>
         <p>Order #10</p>
-      </div>
-      <div className="container">
         <hr />
         <div className="row">
-          <div className="col left-col">
+          <div className="col-xl-6 left-col">
             <h3>Address</h3>
             <Form>
               <Row className="mb-3">
@@ -100,10 +98,10 @@ function Checkout() {
             <div className="payment">
               <h2>Payment</h2>
               <div>
-                <span>Select payment method</span>
+                <p>Select payment method</p>
                 <form action="">
                   <div>
-                    <input type="checkbox" id="credit-cards" className="checkbox-round" />
+                    <input type="checkbox" id="credit-cards" className="checkbox-round-pay" />
                     <label htmlFor="credit-cards"> Credit / Debit card</label>
                     <img
                       src={cards}
@@ -112,7 +110,7 @@ function Checkout() {
                     />
                   </div>
                   <div>
-                    <input type="checkbox" id="mercado-pago" className="checkbox-round" />
+                    <input type="checkbox" id="mercado-pago" className="checkbox-round-pay" />
                     <label htmlFor="mercado-pago"> Mercado Pago</label>
                     <img
                       src={mercadoP}
@@ -121,7 +119,7 @@ function Checkout() {
                     />
                   </div>
                   <div>
-                    <input type="checkbox" id="paypal" className="checkbox-round" />
+                    <input type="checkbox" id="paypal" className="checkbox-round-pay" />
                     <label htmlFor="paypal"> PayPal</label>
                     <img src={paypal} alt="PayPal" style={{ width: "20%", marginLeft: "20px" }} />
                   </div>
@@ -129,13 +127,18 @@ function Checkout() {
               </div>
               <Button
                 type="submit"
-                style={{ backgroundColor: "orange", border: "1px solid orange", color: "#000" }}
+                style={{
+                  backgroundColor: "orange",
+                  border: "1px solid orange",
+                  color: "#000",
+                  marginTop: "20px",
+                }}
               >
                 Confirm payment
               </Button>
             </div>
           </div>
-          <div className="col">
+          <div className="col-xl-6">
             <h2>Order details</h2>
             <div className="personal-data">
               <h4 className="subtitle">Personal data</h4>
@@ -145,16 +148,21 @@ function Checkout() {
                 <li>Email: {user.email}</li>
               </ul>
             </div>
-            <div>
-              <h4 className="subtitle">Address</h4>
-              Address: {address}
-              <br />
-              City: {city} <br />
-              Country:{country} <br />
-              Postal Code: {postalCode}
+            <div className="personal-data">
+              <h4 className="subtitle" style={{ marginTop: "30px" }}>
+                Address
+              </h4>
+              <ul>
+                <li> Address: {address}</li>
+                <li> City: {city}</li>
+                <li> Country:{country}</li>
+                <li> Postal Code: {postalCode}</li>
+              </ul>
             </div>
-            <div>
-              <h4 className="subtitle">Order Summary</h4>
+            <div className="personal-data">
+              <h4 className="subtitle" style={{ marginTop: "30px" }}>
+                Order Summary
+              </h4>
               <Table striped bordered hover>
                 <thead>
                   <tr>
@@ -175,7 +183,7 @@ function Checkout() {
                   })}
                 </tbody>
               </Table>
-              Total: {total}
+              <h5>Total: {total}</h5>
             </div>
           </div>
         </div>

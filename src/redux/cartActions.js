@@ -1,7 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 
 const add = createAction("ADD");
-const remove = createAction("REMOVE");
+const substract = createAction("SUBSTRACT");
 const addAddress = createAction("ADD_ADDRESS");
 
-export { add, remove, addAddress };
+export { add, substract, addAddress };

@@ -19,12 +19,12 @@ const ProductsHeader = () => {
           </div>
           <div>
             <img src={RadWagon} alt="RadRover High-Step" className="header-img" />
-            <h4>Cargo & utility</h4>
+            <h4>Cargo & Utility</h4>
             <p className="header-text">Hold everything you'll need.</p>
           </div>
           <div>
             <img src={RadCity} alt="RadRover High-Step" className="header-img" />
-            <h4>City & commuter</h4>
+            <h4>City & Commuter</h4>
             <p className="header-text">Your new way about town.</p>
           </div>
           <div>
@@ -36,23 +36,23 @@ const ProductsHeader = () => {
       </div>
       <Carousel>
         <div>
-          <img src={RadRover} alt="RadRover High-Step" style={{ width: "30%" }} />
+          <img src={RadRover} alt="RadRover High-Step" style={{ width: "50%" }} />
           <h4>Off road</h4>
           <p className="header-text">Fat tires for big adventures.</p>
         </div>
 
         <div>
-          <img src={RadWagon} alt="RadRover High-Step" style={{ width: "30%" }} />
-          <h4>Cargo & utility</h4>
+          <img src={RadWagon} alt="RadRover High-Step" style={{ width: "50%" }} />
+          <h4>Cargo & Utility</h4>
           <p className="header-text">Hold everything you'll need.</p>
         </div>
         <div>
-          <img src={RadCity} alt="RadRover High-Step" style={{ width: "30%" }} />
-          <h4>City & commuter</h4>
+          <img src={RadCity} alt="RadRover High-Step" style={{ width: "50%" }} />
+          <h4>City & Commuter</h4>
           <p className="header-text">Your new way about town.</p>
         </div>
         <div>
-          <img src={RadExpand} alt="RadRover High-Step" style={{ width: "30%" }} />
+          <img src={RadExpand} alt="RadRover High-Step" style={{ width: "50%" }} />
           <h4>Folding</h4>
           <p className="header-text"> Practically for all spaces.</p>
         </div>
