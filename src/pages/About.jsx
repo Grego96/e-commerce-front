@@ -51,7 +51,7 @@ function About() {
               Entity-Relations Diagram. We defined the main relations between the following
               entities: User, Product, Category and Order.
             </p>
-            <h3 className="planning-design">2 - Design and Inspiration </h3>
+            <h3>2 - Design and Inspiration </h3>
             <p className="planning-text">
               We inspire our website on Rad Power Bikes, the original website. We nurtue our
               database using pictures, descriptions, names and prices of that website too.

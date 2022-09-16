@@ -177,13 +177,13 @@ function Checkout() {
                       <tr key={i}>
                         <td>{p.product.name}</td>
                         <td>{p.quantity}</td>
-                        <td>{p.product.price}</td>
+                        <td>${p.product.price}</td>
                       </tr>
                     );
                   })}
                 </tbody>
               </Table>
-              <h5>Total: {total}</h5>
+              <h5>Total: ${total}</h5>
             </div>
           </div>
         </div>
