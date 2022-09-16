@@ -59,6 +59,7 @@
 }
 
 .nav-home-item svg {
+  display: none !important;
   width: 10px;
   height: 10px;
   margin-top: auto;
