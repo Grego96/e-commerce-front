@@ -13,7 +13,7 @@ function FeaturedCollections() {
       baseURL: `${process.env.REACT_APP_API_BASE}/products/outstanding`,
     });
     const filteredResult = result.data.filter((product, i) => {
-      return i <= 4
+      return i <= 3
     })
     setOutstading(filteredResult);
   }
