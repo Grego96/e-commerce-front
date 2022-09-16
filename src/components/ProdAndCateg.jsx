@@ -34,7 +34,11 @@ const ProdAndCateg = () => {
                 return (
                   <Link key={product.id} to={`/products/${product.slug}`}>
                     <Card style={{ border: "none" }}>
-                      <Card.Img variant="top" src={`../img/${product.images.image1}`} className="product-img" />
+                      <Card.Img
+                        variant="top"
+                        src={`../img/${product.images.image1}`}
+                        className={`product-img`}
+                      />
                       <Card.Body>
                         <div className="d-flex justify-content-between">
                           <Card.Title>{product.name}</Card.Title>
