@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CategoriesSection from "../components/CategoriesSection";
 import Card from "react-bootstrap/Card";
-import product1 from "../img/bicycles/RadRover 6 Plus Electric Fat Tire Bike/High-Step/Rover6HS_charcaol_side.png";
 import { Link } from "react-router-dom";
 const ProdAndCateg = () => {
   const [products, setProducts] = useState(null);
@@ -35,7 +34,7 @@ const ProdAndCateg = () => {
                 return (
                   <Link key={product.id} to={`/products/${product.slug}`}>
                     <Card style={{ border: "none" }}>
-                      <Card.Img variant="top" src={product1} className="product-img" />
+                      <Card.Img variant="top" src={`../img/${product.images.image1}`} className="product-img" />
                       <Card.Body>
                         <div className="d-flex justify-content-between">
                           <Card.Title>{product.name}</Card.Title>

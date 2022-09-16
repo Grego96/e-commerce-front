@@ -1,8 +1,25 @@
-import img2 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
-import img1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_angle.png";
 import SugestedTitem from "./ProductSugestedItem";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function ProductSugested() {
+  const [outstading, setOutstading] = useState([]);
+
+  async function getOutstanding() {
+    const result = await axios({
+      method: "get",
+      baseURL: `${process.env.REACT_APP_API_BASE}/products/outstanding`,
+    });
+    const filteredResult = result.data.filter((product, i) => {
+      return i <= 4;
+    });
+    setOutstading(filteredResult);
+  }
+
+  useEffect(() => {
+    getOutstanding();
+  }, []);
+
   return (
     <>
       <section className="container-fluid">
@@ -10,42 +27,20 @@ function ProductSugested() {
           <h3>Other bikes you might like</h3>
         </div>
         <div className="row text-center">
-          <SugestedTitem
-            item={{
-              name: "RadCity 4 High-Step",
-              category: "Electric City Bike",
-              image1: img1,
-              image2: img2,
-              price: 1399,
-            }}
-          />
-          <SugestedTitem
-            item={{
-              name: "RadCity 4 High-Step",
-              category: "Electric City Bike",
-              image1: img1,
-              image2: img2,
-              price: 1399,
-            }}
-          />
-          <SugestedTitem
-            item={{
-              name: "RadCity 4 High-Step",
-              category: "Electric City Bike",
-              image1: img1,
-              image2: img2,
-              price: 1399,
-            }}
-          />
-          <SugestedTitem
-            item={{
-              name: "RadCity 4 High-Step",
-              category: "Electric City Bike",
-              image1: img1,
-              image2: img2,
-              price: 1399,
-            }}
-          />
+          {outstading.map((p) => {
+            return (
+              <SugestedTitem
+                item={{
+                  name: p.name,
+                  category: p.category,
+                  image1: p.images.image1,
+                  image2: p.images.image2,
+                  price: p.price,
+                  slug: p.slug
+                }}
+              />
+            );
+          })}
         </div>
       </section>
     </>

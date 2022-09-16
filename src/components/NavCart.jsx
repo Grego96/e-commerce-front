@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import bicycle1 from "../img/bicycles/RadCity 4 Electric Commuter Bike/City4HS_Black_side.png";
 import { useDispatch, useSelector } from "react-redux";
 import { add, substract, remove } from "../redux/cartActions";
 import { Link } from "react-router-dom";
@@ -43,7 +42,7 @@ function NavCart() {
         return (
           <div className="cartItem">
             <div className="img-info">
-              <img src={bicycle1} alt="" />
+              <img src={`../img/${p.product.images.image1}`} alt="" />
               <div className="cartInfo">
                 <h4>{p.product.name}</h4>
               </div>
