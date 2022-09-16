@@ -153,10 +153,11 @@ function Checkout() {
                 Address
               </h4>
               <ul>
-                <li> Address: {address}</li>
-                <li> City: {city}</li>
-                <li> Country:{country}</li>
-                <li> Postal Code: {postalCode}</li>
+                <li> Address: {cart.address}</li>
+                <li> City: {cart.city}</li>
+                <li> Country: {cart.country}</li>
+                <li> Phone number: {cart.phone_number}</li>
+                <li> Postal Code: {cart.postal_code}</li>
               </ul>
             </div>
             <div className="personal-data">
