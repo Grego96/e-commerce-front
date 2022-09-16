@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { shortText } from "limit-text-js";
 
 function FeaturedCard({ product }) {
-
   return (
     <div className="featured-card">
       <img src={`../img/${product.images.image1}`} alt="" className="right-img-card" />
