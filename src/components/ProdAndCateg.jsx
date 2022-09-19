@@ -5,21 +5,26 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 const ProdAndCateg = () => {
   const [products, setProducts] = useState(null);
+  const [categorieId, setCategorieId] = useState(null)
+
+  const getProducts = async () => {
+    try {
+      const result = await axios({
+        method: "get",
+        baseURL: `${process.env.REACT_APP_API_BASE}/products`,
+        params: {
+          categoryId: categorieId
+        }
+      });
+      setProducts(result.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const result = await axios({
-          method: "get",
-          baseURL: `${process.env.REACT_APP_API_BASE}/products`,
-        });
-        setProducts(result.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     getProducts();
-  }, []);
+  }, [categorieId]);
 
   return (
     <>
@@ -27,7 +32,7 @@ const ProdAndCateg = () => {
         <div className="products-container">
           <div className="row">
             <div className="col-2 remove-col">
-              <CategoriesSection />
+              <CategoriesSection setCategorieId={setCategorieId}/>
             </div>
             <div className="col-10 col-xs-12 bikes-container">
               {products.map((product) => {

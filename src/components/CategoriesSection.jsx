@@ -1,28 +1,72 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 
-const CategoriesSection = () => {
+const CategoriesSection = ({ setCategorieId }) => {
   return (
     <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
       <Accordion.Item eventKey="0">
         <Accordion.Header>Bike Style</Accordion.Header>
         <Accordion.Body>
           <ul className="category">
-            <li>
-              <input type="checkbox" name="Cargo" className="checkbox-round" />
-              <label htmlFor="Cargo">Cargo & Utility</label>
+          <li>
+              <input
+                id="1"
+                type="radio"
+                name="categorie"
+                className="checkbox-round"
+                onClick={(e) => {
+                  setCategorieId(null);
+                }}
+              />
+              <label htmlFor="categorie">All</label>
             </li>
             <li>
-              <input type="checkbox" name="Cargo" className="checkbox-round" />
-              <label htmlFor="Cargo">City</label>
+              <input
+                id="1"
+                type="radio"
+                name="categorie"
+                className="checkbox-round"
+                onClick={(e) => {
+                  setCategorieId(e.target.id);
+                }}
+              />
+              <label htmlFor="categorie">Cargo & Utility</label>
             </li>
             <li>
-              <input type="checkbox" className="checkbox-round" />
+              <input
+                id="2"
+                type="radio"
+                name="categorie"
+                className="checkbox-round"
+                onClick={(e) => {
+                  setCategorieId(e.target.id);
+                }}
+              />
+              <label htmlFor="categorie">City</label>
+            </li>
+            <li>
+              <input
+                id="3"
+                type="radio"
+                className="checkbox-round"
+                name="categorie"
+                onClick={(e) => {
+                  setCategorieId(e.target.id);
+                }}
+              />
               <label htmlFor="">Folding</label>
             </li>
             <li>
-              <input type="checkbox" className="checkbox-round" name="Cargo" />
-              <label htmlFor="Cargo">Off-Road</label>
+              <input
+                id="4"
+                type="radio"
+                className="checkbox-round"
+                name="categorie"
+                onClick={(e) => {
+                  setCategorieId(e.target.id);
+                }}
+              />
+              <label htmlFor="categorie">Off-Road</label>
             </li>
           </ul>
         </Accordion.Body>

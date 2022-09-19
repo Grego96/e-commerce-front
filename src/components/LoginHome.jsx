@@ -13,11 +13,17 @@ function LoginHome() {
   const [showRegister, setShowRegister] = useState(false);
 
   const [loginMessage, setLoginMessage] = useState("");
+  const [registerMessage, setRegisterMessage] = useState("")
 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  async function login() {
+  const [registerFirstName, setRegisterFirstName] = useState("");
+  const [registerLastName, setRegisterLastName] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+
+  async function login(email,password) {
     try {
       const result = await axios({
         method: "post",
@@ -26,8 +32,8 @@ function LoginHome() {
           "Content-type": "application/json",
         },
         data: {
-          email: loginEmail,
-          password: loginPassword,
+          email: email,
+          password: password,
         },
       });
       setLoginMessage("");
@@ -35,6 +41,30 @@ function LoginHome() {
       dispatch(storeUser(result.data.user));
     } catch (error) {
       setLoginMessage(error.response.data.message);
+    }
+  }
+
+  async function register() {
+    try {
+      const result = await axios({
+        method: "post",
+        baseURL: `${process.env.REACT_APP_API_BASE}/register`,
+        headers: {
+          "Content-type": "application/json",
+        },
+        data: {
+          firstname: registerFirstName,
+          lastname: registerLastName,
+          email: registerEmail,
+          password: registerPassword,
+        },
+      });
+      console.log(result.data);
+      login(registerEmail,registerPassword)
+      setRegisterMessage("")
+    } catch (error) {
+      console.log(error);
+      setRegisterMessage(error.response.data.message);
     }
   }
 
@@ -96,7 +126,7 @@ function LoginHome() {
             name="password"
             onChange={(e) => setLoginPassword(e.target.value)}
           />
-          <button className="login-button" onClick={() => login()}>
+          <button className="login-button" onClick={() => login(loginEmail,loginPassword)}>
             Login
           </button>
           <p>Forgot your password?</p>
@@ -106,15 +136,16 @@ function LoginHome() {
           style={showRegister ? { visibility: "visible", opacity: 1 } : { visibility: "hidden" }}
         >
           <h6 className="login-title">Register</h6>
+          <p className="loginMessage">{registerMessage}</p>
           <label htmlFor="Firstname">Firstname:</label>
-          <input type="text" />
+          <input type="text" onChange={(e) => setRegisterFirstName(e.target.value)} />
           <label htmlFor="Lastname">Lastname:</label>
-          <input type="text" />
+          <input type="text" onChange={(e) => setRegisterLastName(e.target.value)} />
           <label htmlFor="Email">Email:</label>
-          <input type="text" />
+          <input type="text" onChange={(e) => setRegisterEmail(e.target.value)} />
           <label htmlFor="password">Password:</label>
-          <input type="password" />
-          <button className="login-button">Register</button>
+          <input type="password" onChange={(e) => setRegisterPassword(e.target.value)} />
+          <button className="login-button" onClick={() => {register()}}>Register</button>
         </div>
       </div>
       <div
