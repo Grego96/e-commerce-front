@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import NavHome from "../components/NavHome";
-import avatar from "../img/others/avatar.png";
 import bootstrap from "../img/others/bootstrap.png";
 import css from "../img/others/css.png";
 import figma from "../img/others/figma.png";
@@ -84,43 +83,43 @@ function About() {
           <div className="techno-container">
             <div className="col">
               <div>
-                <img src={react} alt="React" />
+                <img src={react} alt="React" className="animation" />
                 <p style={{ textAlign: "center" }}>React</p>
               </div>
               <div>
-                <img src={bootstrap} alt="React" />
+                <img src={bootstrap} alt="Bootstrap" className="animation" />
                 <p style={{ textAlign: "center" }}>Bootstrap</p>
               </div>
               <div>
-                <img src={css} alt="React" />
+                <img src={css} alt="CSS" className="animation" />
                 <p style={{ textAlign: "center" }}>CSS 3</p>
               </div>
             </div>
             <div className="col">
               <div>
-                <img src={js} alt="React" />
-                <p style={{ textAlign: "center" }}>Javascript</p>
+                <img src={js} alt="Javascript" className="animation" />
+                <p style={{ textAlign: "center" }}>JavaScript</p>
               </div>
               <div>
-                <img src={github} alt="React" />
+                <img src={github} alt="Github" className="animation" />
                 <p style={{ textAlign: "center" }}>GitHub</p>
               </div>
               <div>
-                <img src={node} alt="React" />
+                <img src={node} alt="Node" className="animation" />
                 <p style={{ textAlign: "center" }}>Node.js</p>
               </div>
             </div>
             <div className="col">
               <div>
-                <img src={redux} alt="React" style={{ width: "90px" }} />
+                <img src={redux} alt="Redux" style={{ width: "90px" }} className="animation" />
                 <p style={{ textAlign: "center" }}>Redux</p>
               </div>
               <div>
-                <img src={mysql} alt="React" style={{ width: "70px" }} />
+                <img src={mysql} alt="MySQL" style={{ width: "70px" }} className="animation" />
                 <p style={{ textAlign: "center" }}>MySQL</p>
               </div>
               <div>
-                <img src={figma} alt="React" style={{ width: "70px" }} />
+                <img src={figma} alt="Figma" style={{ width: "70px" }} className="animation" />
                 <p style={{ textAlign: "center" }}>Figma</p>
               </div>
             </div>

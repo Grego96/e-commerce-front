@@ -40,7 +40,7 @@ function Checkout() {
       <NavHome />
       <div className="container">
         <h1>Checkout</h1>
-        <p>Order #10</p>
+
         <hr />
         <div className="row">
           <div className="col-xl-6 left-col">
@@ -101,7 +101,12 @@ function Checkout() {
                 <p>Select payment method</p>
                 <form action="">
                   <div>
-                    <input type="checkbox" id="credit-cards" className="checkbox-round-pay" />
+                    <input
+                      type="radio"
+                      id="credit-cards"
+                      className="checkbox-round-pay"
+                      name="pay-method"
+                    />
                     <label htmlFor="credit-cards"> Credit / Debit card</label>
                     <img
                       src={cards}
@@ -110,7 +115,12 @@ function Checkout() {
                     />
                   </div>
                   <div>
-                    <input type="checkbox" id="mercado-pago" className="checkbox-round-pay" />
+                    <input
+                      type="radio"
+                      id="mercado-pago"
+                      className="checkbox-round-pay"
+                      name="pay-method"
+                    />
                     <label htmlFor="mercado-pago"> Mercado Pago</label>
                     <img
                       src={mercadoP}
@@ -119,7 +129,12 @@ function Checkout() {
                     />
                   </div>
                   <div>
-                    <input type="checkbox" id="paypal" className="checkbox-round-pay" />
+                    <input
+                      type="radio"
+                      id="paypal"
+                      className="checkbox-round-pay"
+                      name="pay-method"
+                    />
                     <label htmlFor="paypal"> PayPal</label>
                     <img src={paypal} alt="PayPal" style={{ width: "20%", marginLeft: "20px" }} />
                   </div>
@@ -139,52 +154,54 @@ function Checkout() {
             </div>
           </div>
           <div className="col-xl-6">
-            <h2>Order details</h2>
-            <div className="personal-data">
-              <h4 className="subtitle">Personal data</h4>
-              <ul>
-                <li>Firstname: {user.first_name}</li>
-                <li>Lastname: {user.last_name}</li>
-                <li>Email: {user.email}</li>
-              </ul>
-            </div>
-            <div className="personal-data">
-              <h4 className="subtitle" style={{ marginTop: "30px" }}>
-                Address
-              </h4>
-              <ul>
-                <li> Address: {cart.address}</li>
-                <li> City: {cart.city}</li>
-                <li> Country: {cart.country}</li>
-                <li> Phone number: {cart.phone_number}</li>
-                <li> Postal Code: {cart.postal_code}</li>
-              </ul>
-            </div>
-            <div className="personal-data">
-              <h4 className="subtitle" style={{ marginTop: "30px" }}>
-                Order Summary
-              </h4>
-              <Table striped bordered hover>
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cart.product_json.map((p, i) => {
-                    return (
-                      <tr key={i}>
-                        <td>{p.product.name}</td>
-                        <td>{p.quantity}</td>
-                        <td>${p.product.price}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </Table>
-              <h5>Total: ${total}</h5>
+            <div className="data-container">
+              <h2>Order details</h2>
+              <div className="personal-data">
+                <h4 className="subtitle">Personal data</h4>
+                <ul>
+                  <li>Firstname: {user.first_name}</li>
+                  <li>Lastname: {user.last_name}</li>
+                  <li>Email: {user.email}</li>
+                </ul>
+              </div>
+              <div className="personal-data">
+                <h4 className="subtitle" style={{ marginTop: "30px" }}>
+                  Address
+                </h4>
+                <ul>
+                  <li> Address: {cart.address}</li>
+                  <li> City: {cart.city}</li>
+                  <li> Country: {cart.country}</li>
+                  <li> Phone number: {cart.phone_number}</li>
+                  <li> Postal Code: {cart.postal_code}</li>
+                </ul>
+              </div>
+              <div className="personal-data">
+                <h4 className="subtitle" style={{ marginTop: "30px" }}>
+                  Order Summary
+                </h4>
+                <Table striped bordered hover>
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th>Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cart.product_json.map((p, i) => {
+                      return (
+                        <tr key={i}>
+                          <td>{p.product.name}</td>
+                          <td>{p.quantity}</td>
+                          <td>${p.product.price}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </Table>
+                <h5>Total: ${total}</h5>
+              </div>
             </div>
           </div>
         </div>
