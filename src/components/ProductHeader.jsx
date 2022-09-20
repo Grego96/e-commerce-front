@@ -6,7 +6,7 @@ import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
 import ServiceItem from "./ProductServiceItem";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "../redux/cartActions";
 
@@ -14,6 +14,7 @@ function ProductHeader({ product }) {
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function handleAdd(product, quantity) {
     dispatch(
@@ -27,7 +28,7 @@ function ProductHeader({ product }) {
     <>
       <section className="container-fluid ">
         <div className="go-back">
-          <Link to="/">Go back</Link>
+          <button onClick={() => navigate(-1)}> Go back</button>
         </div>
         <div className="row">
           <div className="product-images col-lg-6">

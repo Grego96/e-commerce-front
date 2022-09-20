@@ -1,0 +1,16 @@
+.thank-container{
+    margin-top: 20%;
+   text-align: center;
+}
+
+.btn-return{
+    background-color: #ff9d00 ;
+    border: 1px solid #ff9d00;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.btn-return:hover{
+    background-color: #ff8800;
+    border: 1px solid #ff8800;
+    color: #fff;
+}

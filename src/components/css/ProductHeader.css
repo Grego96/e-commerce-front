@@ -3,8 +3,9 @@
   padding: 1em 1em 1em 0em;
 }
 
-.go-back a {
+.go-back button {
   padding: 0.25em 0.5em 0.25em 3em;
+  background-color: #fff;
   background-image: url(https://uploads-ssl.webflow.com/607db83d3655938669f3191a/60a51a014db5ff4d90af0d4f_arrow-left_button_dark.svg);
   background-position: 0 50%;
   background-repeat: no-repeat;

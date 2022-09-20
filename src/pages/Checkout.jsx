@@ -77,8 +77,8 @@ function Checkout() {
               </Row>
 
               <Button
+                className="button-confirm"
                 type="submit"
-                style={{ backgroundColor: "orange", border: "1px solid orange", color: "#000" }}
                 onClick={(e) => {
                   e.preventDefault();
                   dispatch(
@@ -140,15 +140,7 @@ function Checkout() {
                   </div>
                 </form>
               </div>
-              <Button
-                type="submit"
-                style={{
-                  backgroundColor: "orange",
-                  border: "1px solid orange",
-                  color: "#000",
-                  marginTop: "20px",
-                }}
-              >
+              <Button type="submit" className="button-confirm">
                 Confirm payment
               </Button>
             </div>

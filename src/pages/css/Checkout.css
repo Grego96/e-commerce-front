@@ -1,11 +1,18 @@
+:root{
+    --orange:#ff9d00 ;
+}
+
 .left-col{
     border-right: 1px solid #C8C9CA;
 }
 
-.button{
-    background-color: orange;
-    border: 1px solid orange;
-    color:#000
+.button-confirm{
+    background-color: var(--orange)!important;
+    border: 1px solid var(--orange)!important;
+    font-size: 1rem  !important;
+}
+.button-confirm:hover{
+    background-color:#ff8800 !important;
 }
 
 .payment{
@@ -20,7 +27,7 @@
 }
 
 .subtitle{
-    color: orange;
+    color: var(--orange);
 }
 
 .checkbox-round-pay{

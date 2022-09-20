@@ -9,6 +9,7 @@ import Checkout from "./pages/Checkout";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import Thank from "./pages/Thank";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/products/:slug" element={<Product />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/about" element={<About />} />
+      <Route path="/thank" element={<Thank />} />
       {/* Privadas */}
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/profile" element={<Profile />} />

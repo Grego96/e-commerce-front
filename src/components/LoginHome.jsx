@@ -13,7 +13,7 @@ function LoginHome() {
   const [showRegister, setShowRegister] = useState(false);
 
   const [loginMessage, setLoginMessage] = useState("");
-  const [registerMessage, setRegisterMessage] = useState("")
+  const [registerMessage, setRegisterMessage] = useState("");
 
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
@@ -23,7 +23,7 @@ function LoginHome() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
 
-  async function login(email,password) {
+  async function login(email, password) {
     try {
       const result = await axios({
         method: "post",
@@ -60,8 +60,8 @@ function LoginHome() {
         },
       });
       console.log(result.data);
-      login(registerEmail,registerPassword)
-      setRegisterMessage("")
+      login(registerEmail, registerPassword);
+      setRegisterMessage("");
     } catch (error) {
       console.log(error);
       setRegisterMessage(error.response.data.message);
@@ -126,7 +126,7 @@ function LoginHome() {
             name="password"
             onChange={(e) => setLoginPassword(e.target.value)}
           />
-          <button className="login-button" onClick={() => login(loginEmail,loginPassword)}>
+          <button className="login-button" onClick={() => login(loginEmail, loginPassword)}>
             Login
           </button>
           <p>Forgot your password?</p>
@@ -145,7 +145,14 @@ function LoginHome() {
           <input type="text" onChange={(e) => setRegisterEmail(e.target.value)} />
           <label htmlFor="password">Password:</label>
           <input type="password" onChange={(e) => setRegisterPassword(e.target.value)} />
-          <button className="login-button" onClick={() => {register()}}>Register</button>
+          <button
+            className="login-button"
+            onClick={() => {
+              register();
+            }}
+          >
+            Register
+          </button>
         </div>
       </div>
       <div
@@ -157,7 +164,7 @@ function LoginHome() {
         }
       >
         <p>
-          Loged as: {user.first_name} {user.last_name}
+          Logged as: {user.first_name} {user.last_name}
         </p>
       </div>
     </div>
