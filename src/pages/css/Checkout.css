@@ -43,3 +43,9 @@
         margin-left: 0;
     }
 }
+
+.login-checkout {
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

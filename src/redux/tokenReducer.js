@@ -7,7 +7,9 @@ const tokenReducer = createReducer(initialState, (builder) => {
   builder.addCase(storeToken, (state, action) => {
     state.value = action.payload;
   });
-  builder.addCase(deleteToken, (state, action) => {});
+  builder.addCase(deleteToken, (state, action) => {
+    state.value = ""
+  });
 });
 
 export default tokenReducer;
