@@ -109,7 +109,6 @@ function NavCart() {
         }
       >
         <p>You are not logged.</p>
-        <p>Login?</p>
       </div>
     </div>
   );
