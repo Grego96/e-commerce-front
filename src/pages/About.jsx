@@ -6,6 +6,7 @@ import figma from "../img/others/figma.png";
 import github from "../img/others/github.png";
 import js from "../img/others/js.png";
 import mer from "../img/others/mer.jpg";
+import mer1 from "../img/others/mer1.jpg";
 import mysql from "../img/others/mysql.png";
 import node from "../img/others/node.png";
 import react from "../img/others/react.png";
@@ -37,7 +38,7 @@ function About() {
         <div className="row">
           <div className="col-xl-6">
             <img
-              src={mer}
+              src={mer1}
               alt="MER"
               style={{ width: "100%", borderRadius: "10px" }}
               className="animation"
