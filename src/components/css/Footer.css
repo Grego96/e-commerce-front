@@ -1,6 +1,10 @@
 .footer {
-  background-color: black;
   color: white !important;
+  margin: 0 18%;
+}
+
+.footer-container{
+  background-color: #000;
 }
 
 .footer-item-header {

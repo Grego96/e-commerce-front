@@ -1,5 +1,6 @@
 :root{
     --orange:#ff9d00 ;
+    --grey: #696969;
 }
 
 .left-col{
@@ -7,12 +8,23 @@
 }
 
 .button-confirm{
+    background-color: var(--grey)!important;
+    border: 1px solid var(--grey)!important;
+    font-size: 1rem  !important;
+}
+.button-confirm:hover{
+    background-color:#414141!important;
+}
+
+
+.button-order{
     background-color: var(--orange)!important;
     border: 1px solid var(--orange)!important;
     font-size: 1rem  !important;
 }
-.button-confirm:hover{
-    background-color:#ff8800 !important;
+.button-order:hover{
+    background-color:orange!important;
+   
 }
 
 .payment{
@@ -49,4 +61,10 @@
     .data-container{
         margin-left: 0;
     }
+}
+
+.login-checkout {
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
 }

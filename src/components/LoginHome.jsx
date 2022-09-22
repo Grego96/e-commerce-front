@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { storeToken } from "../redux/tokenActions";
-import { storeUser } from "../redux/userActions";
+import { storeToken, deleteToken } from "../redux/tokenActions";
+import { storeUser, deleteUser } from "../redux/userActions";
 
 function LoginHome() {
   const dispatch = useDispatch();
@@ -166,6 +166,15 @@ function LoginHome() {
         <p>
           Logged as: {user.first_name} {user.last_name}
         </p>
+        <button
+          className="login-button"
+          onClick={() => {
+            dispatch(deleteToken());
+            dispatch(deleteUser());
+          }}
+        >
+          Log out
+        </button>
       </div>
     </div>
   );

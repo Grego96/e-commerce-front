@@ -12,6 +12,8 @@ function Product() {
   const [product, setProduct] = useState();
   const params = useParams();
 
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     async function getBike() {
       const response = await axios({
@@ -30,7 +32,7 @@ function Product() {
     <>
       {product && (
         <>
-          <Navbar />
+          <Navbar show={show} setShow={setShow} />
           <ProductHeader product={product} />
           <ProductDetails />
           <ProductSugested />

@@ -6,11 +6,15 @@ import StoryHome from "../components/StoryHome";
 import ServicesHome from "../components/ServicesHome";
 import Footer from "../components/Footer";
 import EmailSection from "../components/EmailSection";
+import { useState } from "react";
 
 function Home() {
+   const [show, setShow] = useState(false);
+
+
   return (
     <div className="home">
-      <NavHome />
+      <NavHome show={show} setShow={setShow}/>
       <MainHome />
       <FeaturedCollections />
       <StoryHome />

@@ -3,8 +3,8 @@ import FooterItem from "./FooterItem";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="container">
+    <div className="footer-container">
+      <footer className="footer">
         <div className="row">
           <FooterItem
             title={"Shop"}
@@ -17,8 +17,8 @@ function Footer() {
           />
           <FooterItem title={"Wholesale"} items={["Overview", "Register as a Wholesaler"]} />
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
 }
 

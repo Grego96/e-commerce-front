@@ -12,8 +12,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavCart from "./NavCart";
 import { Link } from "react-router-dom";
 
-function NavHome() {
-  const [show, setShow] = useState(false);
+function NavHome({ show, setShow }) {
+  // const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -53,84 +53,6 @@ function NavHome() {
                   ></path>
                 </svg>
               </div>
-              {/* <div className="menu-hover1">
-                <div className="row">
-                  <div className="col-md-3">
-                    <div className="left-menu">
-                      <h5>Explore our award-winning ebikes</h5>
-                      <p>
-                        Our electric bikes have won more awards than any other brand from Electric
-                        Bike Review.
-                      </p>
-                      <Link to="/products">
-                        <button className="featured-card-button">See all Ebikes</button>
-                      </Link>
-                      <h6>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M22 11.0801V12.0001C21.9988 14.1565 21.3005 16.2548 20.0093 17.9819C18.7182 19.7091 16.9033 20.9726 14.8354 21.584C12.7674 22.1954 10.5573 22.122 8.53447 21.3747C6.51168 20.6274 4.78465 19.2462 3.61096 17.4372C2.43727 15.6281 1.87979 13.4882 2.02168 11.3364C2.16356 9.18467 2.99721 7.13643 4.39828 5.49718C5.79935 3.85793 7.69279 2.71549 9.79619 2.24025C11.8996 1.76502 14.1003 1.98245 16.07 2.86011"
-                            stroke="black"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></path>
-                          <path
-                            d="M22 4L12 14.01L9 11.01"
-                            stroke="black"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></path>
-                        </svg>
-                        14-day free trial
-                      </h6>
-                      <h6>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M22 11.0801V12.0001C21.9988 14.1565 21.3005 16.2548 20.0093 17.9819C18.7182 19.7091 16.9033 20.9726 14.8354 21.584C12.7674 22.1954 10.5573 22.122 8.53447 21.3747C6.51168 20.6274 4.78465 19.2462 3.61096 17.4372C2.43727 15.6281 1.87979 13.4882 2.02168 11.3364C2.16356 9.18467 2.99721 7.13643 4.39828 5.49718C5.79935 3.85793 7.69279 2.71549 9.79619 2.24025C11.8996 1.76502 14.1003 1.98245 16.07 2.86011"
-                            stroke="black"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></path>
-                          <path
-                            d="M22 4L12 14.01L9 11.01"
-                            stroke="black"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></path>
-                        </svg>
-                        1-year warranty
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <NavCardProduct img={bicycle1} categorie={"Off-road"} />
-                      </div>
-                      <div className="col-md-6">
-                        <NavCardProduct img={bicycle2} categorie={"Cargo & ulility"} />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-md-6">
-                        <NavCardProduct img={bicycle4} categorie={"Folding"} />
-                      </div>
-                      <div className="col-md-6">
-                        <NavCardProduct img={bicycle3} categorie={"Step-thru"} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-3">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam repellat deleniti
-                    aperiam autem mollitia voluptatibus ipsum officiis numquam possimus quidem optio
-                    aliquam distinctio repellendus facilis quae accusantium, similique porro
-                    necessitatibus!
-                  </div>
-                </div>
-              </div> */}
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
@@ -156,7 +78,9 @@ function NavHome() {
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
-                <p className="m-0 p-0 p-lg-3">Service & support</p>
+                <p className="m-0 p-0 p-lg-3">
+                  <Link to="/support">Service & support</Link>
+                </p>
                 <svg
                   className="icon icon--arrow-bottom icon--arrow-bottom3 d-none d-lg-block"
                   viewBox="0 0 14 8"
@@ -176,7 +100,9 @@ function NavHome() {
             </Nav.Link>
             <Nav.Link>
               <div className="nav-home-item">
-                <p className="m-0 p-0 p-lg-3">About Rad</p>
+                <p className="m-0 p-0 p-lg-3">
+                  <Link to="rad">About Rad</Link>
+                </p>
                 <svg
                   className="icon icon--arrow-bottom icon--arrow-bottom4 d-none d-lg-block"
                   viewBox="0 0 14 8"

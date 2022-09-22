@@ -11,11 +11,18 @@ import paypal from "../img/others/paypal.png";
 import { useSelector, useDispatch } from "react-redux";
 import "./css/Checkout.css";
 import { useEffect, useState } from "react";
-import { addAddress } from "../redux/cartActions";
+import { addAddress, addPaymentMethod } from "../redux/cartActions";
+import axios from "axios";
 
 function Checkout() {
   const user = useSelector((state) => state.user.value);
   const cart = useSelector((state) => state.cart.value);
+  const token = useSelector((state) => state.token.value);
+
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+
+  const [payMessage, setPayMessage] = useState("");
 
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
@@ -23,9 +30,11 @@ function Checkout() {
   const [phone, setPhone] = useState("");
   const [postalCode, setPostalCode] = useState("");
 
-  const dispatch = useDispatch();
-  const [total, setTotal] = useState(0);
+  const [paymentMethod, setPaymentMethod] = useState(null);
 
+  const dispatch = useDispatch();
+
+  const [total, setTotal] = useState(0);
   let auxTotal = 0;
 
   for (const product of cart.product_json) {
@@ -33,11 +42,28 @@ function Checkout() {
   }
   useEffect(() => {
     setTotal(auxTotal);
-  }, []);
+  }, [auxTotal]);
+
+  async function order() {
+    try {
+      const result = await axios({
+        method: "post",
+        baseURL: `${process.env.REACT_APP_API_BASE}/orders`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data: cart,
+      });
+      setPayMessage(result.data.message);
+    } catch (error) {
+      setPayMessage(error.response.data.message);
+      console.log(error);
+    }
+  }
 
   return (
     <>
-      <NavHome />
+      <NavHome show={show} setShow={setShow} />
       <div className="container">
         <h1>Checkout</h1>
 
@@ -103,9 +129,13 @@ function Checkout() {
                   <div>
                     <input
                       type="radio"
-                      id="credit-cards"
+                      id="Credit"
                       className="checkbox-round-pay"
-                      name="pay-method"
+                      name="payment-method"
+                      onClick={(e) => {
+                        setPaymentMethod(e.target.id);
+                        dispatch(addPaymentMethod(e.target.id));
+                      }}
                     />
                     <label htmlFor="credit-cards"> Credit / Debit card</label>
                     <img
@@ -117,9 +147,13 @@ function Checkout() {
                   <div>
                     <input
                       type="radio"
-                      id="mercado-pago"
+                      id="Mercado pago"
                       className="checkbox-round-pay"
-                      name="pay-method"
+                      name="payment-method"
+                      onClick={(e) => {
+                        setPaymentMethod(e.target.id);
+                        dispatch(addPaymentMethod(e.target.id));
+                      }}
                     />
                     <label htmlFor="mercado-pago"> Mercado Pago</label>
                     <img
@@ -131,9 +165,13 @@ function Checkout() {
                   <div>
                     <input
                       type="radio"
-                      id="paypal"
+                      id="Paypal"
                       className="checkbox-round-pay"
-                      name="pay-method"
+                      name="payment-method"
+                      onClick={(e) => {
+                        setPaymentMethod(e.target.id);
+                        dispatch(addPaymentMethod(e.target.id));
+                      }}
                     />
                     <label htmlFor="paypal"> PayPal</label>
                     <img src={paypal} alt="PayPal" style={{ width: "20%", marginLeft: "20px" }} />
@@ -148,7 +186,15 @@ function Checkout() {
           <div className="col-xl-6">
             <div className="data-container">
               <h2>Order details</h2>
-              <div className="personal-data">
+
+              <div
+                className="personal-data"
+                style={
+                  !(Object.keys(user).length === 0 && user.constructor === Object)
+                    ? { display: "block", opacity: 1 }
+                    : { display: "none" }
+                }
+              >
                 <h4 className="subtitle">Personal data</h4>
                 <ul>
                   <li>Firstname: {user.first_name}</li>
@@ -156,6 +202,26 @@ function Checkout() {
                   <li>Email: {user.email}</li>
                 </ul>
               </div>
+
+              <div
+                className="personal-data"
+                style={
+                  Object.keys(user).length === 0 && user.constructor === Object
+                    ? { display: "block", opacity: 1 }
+                    : { display: "none" }
+                }
+              >
+                <p>You must be logged to continue with the purchase.</p>
+                <button
+                  className="login-checkout"
+                  onClick={() => {
+                    handleShow();
+                  }}
+                >
+                  Login
+                </button>
+              </div>
+
               <div className="personal-data">
                 <h4 className="subtitle" style={{ marginTop: "30px" }}>
                   Address
@@ -192,8 +258,40 @@ function Checkout() {
                     })}
                   </tbody>
                 </Table>
+
                 <h5>Total: ${total}</h5>
+                <h5>
+                  Payment method:{" "}
+                  {paymentMethod ? (
+                    paymentMethod
+                  ) : (
+                    <span style={{ color: "red" }}>Select payment method.</span>
+                  )}
+                </h5>
               </div>
+              <Button
+                type="submit"
+                className="button-order"
+                style={{ marginTop: "20px" }}
+                onClick={() => {
+                  order();
+                }}
+              >
+                Confirm order
+              </Button>
+              {payMessage === "Order created!" ? (
+                <p style={{ color: "#3cb63cd2", fontSize: "1.5rem", fontWeight: "bolder" }}>
+                  {payMessage}
+                </p>
+              ) : (
+                <p style={{ color: "red", fontSize: "1.5rem", fontWeight: "bolder" }}>
+                  {payMessage}
+                </p>
+              )}
+              <p style={{ color: "#4d1818" }}>
+                {" "}
+                {cart.product_json.length < 1 ? "Add at least one item to cart to continue." : ""}
+              </p>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import shield from "../img/icons/shield.svg";
 import headphones from "../img/icons/headphones.svg";
 import "./css/ProductHeader.css";
 import ServiceItem from "./ProductServiceItem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "../redux/cartActions";
@@ -24,6 +24,7 @@ function ProductHeader({ product }) {
       }),
     );
   }
+
   return (
     <>
       <section className="container-fluid ">
