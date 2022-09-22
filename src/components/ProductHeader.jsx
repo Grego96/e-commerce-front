@@ -12,6 +12,7 @@ import { add } from "../redux/cartActions";
 
 function ProductHeader({ product }) {
   const [quantity, setQuantity] = useState(1);
+  const [addMessage, setAddMessage] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,6 +24,13 @@ function ProductHeader({ product }) {
         quantity,
       }),
     );
+  }
+
+  function addmessage() {
+    setAddMessage("Added to cart");
+    setTimeout(() => {
+      setAddMessage("");
+    }, 5000);
   }
 
   return (
@@ -83,10 +91,14 @@ function ProductHeader({ product }) {
                 className="add-to-cart-button"
                 onClick={() => {
                   handleAdd(product, quantity);
+                  addmessage();
                 }}
               >
                 Add to my cart
               </button>
+            </div>
+            <div className="w-100">
+              <p className="text-center">{addMessage}</p>
             </div>
           </div>
         </div>
