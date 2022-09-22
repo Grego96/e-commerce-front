@@ -14,19 +14,22 @@ function Product() {
 
   const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    async function getBike() {
+  async function getBike() {
+    try {
       const response = await axios({
         method: "get",
         baseURL: `${process.env.REACT_APP_API_BASE}/products/${params.slug}`,
       });
       if (response) {
         setProduct(response.data);
-        getBike();
-       console.log(response);
       }
+    } catch (error) {
+      console.log(error);
     }
-  }, [product]);
+  }
+  useEffect(() => {
+    getBike();
+  }, []);
 
   return (
     <>
