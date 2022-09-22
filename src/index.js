@@ -15,9 +15,8 @@ root.render(
     <React.StrictMode>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <ScrollToTop>
-            <App />
-          </ScrollToTop>
+          <ScrollToTop />
+          <App />
         </PersistGate>
       </Provider>
     </React.StrictMode>
