@@ -22,10 +22,10 @@ function Product() {
       });
       if (response) {
         setProduct(response.data);
+        getBike();
+       console.log(response);
       }
     }
-    getBike();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product]);
 
   return (

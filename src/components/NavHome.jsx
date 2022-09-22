@@ -189,6 +189,9 @@ function NavHome({ show, setShow }) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <Link to="/about">
+        <div className="solapa">About this project</div>
+      </Link>
 
       <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton></Offcanvas.Header>
