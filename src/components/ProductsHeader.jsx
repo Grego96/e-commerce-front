@@ -34,6 +34,7 @@ const ProductsHeader = () => {
           </div>
         </div>
       </div>
+
       <Carousel>
         <div>
           <img src={RadRover} alt="RadRover High-Step" style={{ width: "50%" }} />

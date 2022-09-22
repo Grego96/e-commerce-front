@@ -44,7 +44,7 @@ function NavCart() {
             <div className="img-info">
               <img src={`../img/${p.product.images.image1}`} alt="" />
               <div className="cartInfo">
-                <h4>{p.product.name}</h4>
+                <h4 style={{ marginTop: "30px" }}>{p.product.name}</h4>
               </div>
             </div>
             <div className="cartButtons">

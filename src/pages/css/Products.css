@@ -33,7 +33,7 @@
   height: 90px;
 }
 
-.nav-products {
+.nav-products{
   display: flex;
   justify-content: space-between;
   align-items: center;

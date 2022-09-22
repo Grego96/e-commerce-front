@@ -247,7 +247,7 @@
   background-color: var(--main-bg-color);
   border: none;
   border-radius: 50px;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding: 10px 20px;
   transition: 0.3s;
 }
