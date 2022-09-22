@@ -37,12 +37,23 @@ function NavCart() {
 
   return (
     <div className="cartNav">
-      <p className="yourcart">Your cart: {cart.product_json.length} items</p>
+      <p className="yourcart">
+        {cart.product_json.length > 0 ? (
+          `Your cart: ${cart.product_json.length} items`
+        ) : (
+          <>
+            <p>Yout cart is empty</p>
+            <Link to="/products">
+              <button className="checkout">Start buying</button>
+            </Link>
+          </>
+        )}
+      </p>
       {cart.product_json.map((p) => {
         return (
           <div className="cartItem">
             <div className="img-info">
-              <img src={`../img/${p.product.images.image1}`} alt="" />
+              <img src={p.product.images.image1} alt="" />
               <div className="cartInfo">
                 <h4 style={{ marginTop: "30px" }}>{p.product.name}</h4>
               </div>
@@ -91,15 +102,19 @@ function NavCart() {
           </div>
         );
       })}
-      <div className="subtotal">
-        <div className="subtotalP">
-          <p>Subtotal:</p>
-          <p>${total}</p>
+      {cart.product_json.length > 0 ? (
+        <div className="subtotal">
+          <div className="subtotalP">
+            <p>Subtotal:</p>
+            <p>${total}</p>
+          </div>
+          <Link to="/checkout">
+            <button className="checkout">Begin Checkout</button>
+          </Link>
         </div>
-        <Link to="/checkout">
-          <button className="checkout">Begin Checkout</button>
-        </Link>
-      </div>
+      ) : (
+        ""
+      )}
       <div
         className="notloged"
         style={
