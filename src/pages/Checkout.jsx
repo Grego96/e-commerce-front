@@ -265,7 +265,7 @@ function Checkout() {
                   {paymentMethod ? (
                     paymentMethod
                   ) : (
-                    <span style={{ color: "red" }}>Select payment method.</span>
+                    <span style={{ color: " #b51a1a" }}>Select payment method.</span>
                   )}
                 </h5>
               </div>
@@ -284,7 +284,7 @@ function Checkout() {
                   {payMessage}
                 </p>
               ) : (
-                <p style={{ color: "red", fontSize: "1.5rem", fontWeight: "bolder" }}>
+                <p style={{ color: " #b51a1a", fontSize: "1.5rem", fontWeight: "bolder" }}>
                   {payMessage}
                 </p>
               )}

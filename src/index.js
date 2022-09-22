@@ -14,6 +14,10 @@ root.render(
     <React.StrictMode>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
+<<<<<<< HEAD
+=======
+          <ScrollToTop />
+>>>>>>> 0934af30c336819d962bea7c03382493478f6b64
           <App />
         </PersistGate>
       </Provider>
