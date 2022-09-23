@@ -40,7 +40,7 @@ const ProdAndCateg = () => {
                   <Card style={{ border: "none" }}>
                     <Card.Img
                       variant="top"
-                      src={`../img/${product.images.image1}`}
+                      src={product.images.image1}
                       className="product-img"
                     />
                     <Card.Body>
