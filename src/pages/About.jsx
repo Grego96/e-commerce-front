@@ -78,6 +78,23 @@ function About() {
           </div>
         </div>
       </div>
+
+      <div className="content-container">
+        <div className="dashboard-container">
+          <h2>Dashboard</h2>
+          <p>
+            The E-commerce has an administration panel-dashboard, where the user (with administrator
+            permissions) can create, modify/update and delete products, categories, users and
+            orders. To access the dashboard with administrator permissions you must enterㅤ
+            <a href=" https://hackpowerbikesdashboard.vercel.app/dashboard" id="link-dashboard">
+              Rad Power Bikes Dashboard
+            </a>
+            ㅤwith the test user "Admin@Admin.com" and the password "admin". You will be able to
+            make modifications and reset the initial database.
+          </p>
+        </div>
+      </div>
+
       <div className="technologies">
         <div className="content-container">
           <h2>Technologies</h2>

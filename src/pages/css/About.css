@@ -1,7 +1,7 @@
 /* header */
 .main-container{
     background-color: #FAF9F5;
-    padding: 80px;
+    padding: 80px 0;
 }
 
 .main-container h1{
@@ -21,7 +21,7 @@ span, strong{
 /* planning and technologies  */
 
 .content-container{
-    margin: 6% 20%;
+    margin: 6% 15%;
 }
 
 .content-container h2{
@@ -53,7 +53,15 @@ h3{
     width: 80px;
 }
 
+.content-container .dashboard-container{
+    font-size: 1.5rem;
+    padding-top: 30px ;
+}
 
+.content-container #link-dashboard{
+    color: orange !important;
+    text-decoration: underline !important;
+}
 /* team */
 .team-container{
     display: flex;
