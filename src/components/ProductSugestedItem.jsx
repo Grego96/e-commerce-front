@@ -6,8 +6,8 @@ function SugestedTitem({ item }) {
     <div className="col-md-6 col-lg-3 suggested-item  mb-lg-0">
       <Link to={`/products/${item.slug}`}>
       <div className="suggested-image-wrapper">
-        <img src={`../img/${item.image1}`} alt="" className="suggested-image-one" />
-        <img src={`../img/${item.image2}`} alt="" className="suggested-image-two" />
+        <img src={item.image1} alt="" className="suggested-image-one" />
+        <img src={item.image2} alt="" className="suggested-image-two" />
       </div>
       <div className="pt-4 suggested-item-text">
         <div className="up-title">{item.category}</div>

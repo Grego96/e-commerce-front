@@ -14,8 +14,8 @@ function Product() {
 
   const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    async function getBike() {
+  async function getBike() {
+    try {
       const response = await axios({
         method: "get",
         baseURL: `${process.env.REACT_APP_API_BASE}/products/${params.slug}`,
@@ -23,10 +23,13 @@ function Product() {
       if (response) {
         setProduct(response.data);
       }
+    } catch (error) {
+      console.log(error);
     }
+  }
+  useEffect(() => {
     getBike();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [product]);
+  }, []);
 
   return (
     <>

@@ -214,6 +214,7 @@
   position: relative;
   width: 100%;
   z-index: -1;
+  padding: 10px;
 }
 
 .title-featured span {
@@ -256,7 +257,7 @@
   background-color: var(--seg-bg-color);
 }
 
-.checkout{
+.checkout {
   background-color: var(--main-bg-color);
   border: none;
   border-radius: 50px;
@@ -266,9 +267,9 @@
   transition: 0.3s;
 }
 
-.checkout:hover{
+.checkout:hover {
   background-color: rgb(255, 149, 0);
-  color: #fff;
+ 
 }
 /* story home */
 
@@ -405,7 +406,7 @@
 }
 
 .navbar-toggler span {
- background-image: url("../../img/others/menu-hamburguesa.png") !important;
+  background-image: url("../../img/others/menu-hamburguesa.png") !important;
 }
 
 .yourcart {
@@ -430,11 +431,11 @@
   margin-left: 15px;
 }
 
-.cartItem .cartInfo h4{
+.cartItem .cartInfo h4 {
   font-size: 1rem;
 }
 
-.cartItem .cartInfo p{
+.cartItem .cartInfo p {
   font-size: 0.8rem;
 }
 
@@ -443,18 +444,17 @@
   align-items: center;
 }
 
-.cartItem .cartButtons p{
- padding-top: 5px;
- margin:0 10px;
+.cartItem .cartButtons p {
+  padding-top: 5px;
+  margin: 0 10px;
 }
 
-.cartItem .cartButtons button{
+.cartItem .cartButtons button {
   border: none;
   border-radius: 10px;
   padding: 5px;
   background-color: var(--main-bg-color);
   color: rgb(53, 52, 52);
-  
 }
 
 .cartItem .cartButtons .countButtons {
@@ -469,8 +469,28 @@
   padding: 8px;
 }
 
+.countButtons:hover{
+  background-color: rgb(255, 166, 0) !important;
+    border: 1px solid rgb(255, 166, 0) !important;
+}
 .subtotalP {
   display: flex;
   justify-content: space-between;
 }
 
+.solapa {
+  position: fixed;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  right: 0;
+  top: 400px;
+  background-color: var(--main-bg-color);
+  padding: 20px 10px;
+  border-radius: 10px 0 0 10px;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.solapa:hover {
+  background-color: var(--seg-bg-color);
+}

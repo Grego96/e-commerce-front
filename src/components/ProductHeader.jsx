@@ -41,8 +41,8 @@ function ProductHeader({ product }) {
         </div>
         <div className="row">
           <div className="product-images col-lg-6">
-            <img src={`../img/${product.images.image1}`} alt="" className="bg-light mb-3" />
-            <img src={`../img/${product.images.image2}`} alt="" className="bg-light mb-3" />
+            <img src={product.images.image1} alt="" className="bg-light mb-3" />
+            <img src={product.images.image2} alt="" className="bg-light mb-3" />
           </div>
           <div className="product-info col-lg-6">
             <div>

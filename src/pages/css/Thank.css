@@ -1,18 +1,22 @@
-.container{
+.thanks-container{
+    align-items: center;
    display: flex;
-   align-items: center;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 10%;
+height:400px ;    
+max-width: 100%;
+padding: 1rem 0;
+   
 }
 
 .btn-return{
-    background-color: #ff9d00 ;
-    border: 1px solid #ff9d00;
+    background-color: rgb(255, 195, 116) !important;
+    border: 1px solid rgb(255, 195, 116) !important;
     color: #fff;
     font-size: 1.1rem;
 }
 .btn-return:hover{
-    background-color: #ff8800;
-    border: 1px solid #ff8800;
+    background-color: rgb(255, 166, 0) !important;
+    border: 1px solid rgb(255, 166, 0) !important;
     color: #fff;
 }

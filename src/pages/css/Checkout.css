@@ -61,6 +61,9 @@
     .data-container{
         margin-left: 0;
     }
+    .left-col{
+        display: none; 
+       }
 }
 
 .login-checkout {

@@ -8,7 +8,7 @@ const Thank = () => {
   return (
     <>
       <NavHome />
-      <div className="container">
+      <div className="thanks-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           x="0px"

@@ -13,6 +13,7 @@ import "./css/Checkout.css";
 import { useEffect, useState } from "react";
 import { addAddress, addPaymentMethod } from "../redux/cartActions";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   const user = useSelector((state) => state.user.value);
@@ -33,6 +34,7 @@ function Checkout() {
   const [paymentMethod, setPaymentMethod] = useState(null);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [total, setTotal] = useState(0);
   let auxTotal = 0;
@@ -55,6 +57,7 @@ function Checkout() {
         data: cart,
       });
       setPayMessage(result.data.message);
+      navigate("/thank");
     } catch (error) {
       setPayMessage(error.response.data.message);
       console.log(error);
@@ -178,9 +181,6 @@ function Checkout() {
                   </div>
                 </form>
               </div>
-              <Button type="submit" className="button-confirm">
-                Confirm payment
-              </Button>
             </div>
           </div>
           <div className="col-xl-6">

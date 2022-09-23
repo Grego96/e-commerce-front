@@ -75,15 +75,21 @@ button {
 
 /* categories  */
 
-  /* .accordion-btn-focus-border-color{
-    background-color: #fff;
-    padding-y:0
-  } */
-
-.accordion-button:not(.collapsed){
+.accordion{
+  padding: 0 !important;
+  --bs-accordion-body-padding-x: 0 !important
+}
+  
+  .accordion-item{
+    border:none !important
+  }
+  .accordion-button:not(.collapsed){
     background-color: #fff !important;
     color: #000 !important;
-}
+  }
+  .accordion-button:focus{
+    background-color: #fff;
+  }
 
 .category{
   padding: 0;
