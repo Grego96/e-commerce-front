@@ -483,12 +483,16 @@
   writing-mode: vertical-lr;
   text-orientation: mixed;
   right: 0;
-  top: 400px;
+  top: 300px;
   background-color: var(--main-bg-color);
   padding: 20px 10px;
   border-radius: 10px 0 0 10px;
   z-index: 100;
   transition: 0.3s;
+}
+
+.solapa-dsboard {
+  top: 500px;
 }
 
 .solapa:hover {
