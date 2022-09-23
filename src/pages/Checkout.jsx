@@ -72,7 +72,7 @@ function Checkout() {
 
         <hr />
         <div className="row">
-          <div className="col-xl-6 left-col">
+          <div className=" col-xl-6 left-col">
             <h3>Address</h3>
             <Form>
               <Row className="mb-3">
