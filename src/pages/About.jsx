@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import NavHome from "../components/NavHome";
 import bootstrap from "../img/others/bootstrap.png";
 import css from "../img/others/css.png";
+import dashboard from "../img/others/dashboard.jpg";
 import figma from "../img/others/figma.png";
 import github from "../img/others/github.png";
 import js from "../img/others/js.png";
@@ -86,12 +87,17 @@ function About() {
             The E-commerce has an administration panel-dashboard, where the user (with administrator
             permissions) can create, modify/update and delete products, categories, users and
             orders. To access the dashboard with administrator permissions you must enterㅤ
-            <a href=" https://hackpowerbikesdashboard.vercel.app/dashboard" id="link-dashboard">
+            <a
+              href=" https://hackpowerbikesdashboard.vercel.app/dashboard"
+              id="link-dashboard"
+              target="blank"
+            >
               Rad Power Bikes Dashboard
             </a>
             ㅤwith the test user "Admin@Admin.com" and the password "admin". You will be able to
             make modifications and reset the initial database.
           </p>
+          <img src={dashboard} alt="Dashboard" style={{ width: "100%" }} />
         </div>
       </div>
 
