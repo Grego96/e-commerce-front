@@ -192,6 +192,9 @@ function NavHome({ show, setShow }) {
       <Link to="/about">
         <div className="solapa">About this project</div>
       </Link>
+      <a href="https://hackpowerbikesdashboard.vercel.app/" target="blank">
+        <div className="solapa solapa-dsboard">Go to Dashboard</div>
+      </a>
 
       <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton></Offcanvas.Header>
