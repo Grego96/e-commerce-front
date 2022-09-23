@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const CategoriesSection = ({ setCategorieId }) => {
   return (
-    <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
+    <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen id="myAccordion">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Bike Style</Accordion.Header>
         <Accordion.Body>

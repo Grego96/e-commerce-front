@@ -4,7 +4,7 @@ import svg from "../img/others/filter.png";
 const NavProducts = () => {
   return (
     <div className="nav-container">
-      <div className="nav-products container">
+      <div className="nav-products ">
         <div className="nav-filter">
           <img src={svg} alt="Filter" style={{ width: "25px" }} />
           <h5 className="filter">Filter</h5>

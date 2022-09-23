@@ -33,9 +33,9 @@
   height: 90px;
 }
 
-.nav-products{
+.nav-products {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 35px;
 }
@@ -68,13 +68,25 @@ button {
 
 /* products and categories container  */
 .products-container {
+  display: flex;
+  justify-content: center;
   margin: 0 5%;
 }
 
 /* categories  */
+
+  /* .accordion-btn-focus-border-color{
+    background-color: #fff;
+    padding-y:0
+  } */
+
 .accordion-button:not(.collapsed){
     background-color: #fff !important;
     color: #000 !important;
+}
+
+.category{
+  padding: 0;
 }
 
 .category li {
